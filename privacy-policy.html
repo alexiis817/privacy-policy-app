@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativa sulla Privacy - How Much - Preventivi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #333;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Language Selector */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .app-name h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .app-name p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+            z-index: 10;
+            margin-top: 0.5rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .lang-dropdown.show {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.2s;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background: var(--light-bg);
+            color: var(--primary-color);
+        }
+
+        .lang-option.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-option.active:hover {
+            background: var(--secondary-color);
+        }
+
+        .lang-flag {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .lang-name {
+            flex-grow: 1;
+        }
+
+        .lang-badge {
+            background: var(--light-bg);
+            color: var(--secondary-color);
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .policy-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin: 1.8rem 0 1rem 0;
+        }
+
+        .in-short {
+            background: var(--light-bg);
+            padding: 1.2rem;
+            border-left: 4px solid var(--primary-color);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .in-short strong {
+            color: var(--secondary-color);
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background: var(--primary-color);
+            color: white;
+            text-align: left;
+            padding: 1rem;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .data-table tr:hover {
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        /* Lists */
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: #cbd5e1;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+        }
+
+        /* Badge for current page */
+        .current-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .language-selector {
+                align-self: flex-end;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .lang-dropdown {
+                min-width: 180px;
+            }
+            
+            .policy-container {
+                padding: 1.5rem;
+            }
+            
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .lang-btn {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                text-align: left;
+                align-items: flex-start;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .lang-btn span:not(.fa) {
+                display: none;
+            }
+            
+            .lang-btn {
+                padding: 0.5rem;
+            }
+            
+            .lang-btn i:first-child {
+                margin-right: 0;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            header, footer, .language-selector {
+                display: none;
+            }
+            
+            .policy-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-section">
+                <div class="logo">HM</div>
+                <div class="app-name">
+                    <h1>How Much - Preventivi</h1>
+                    <p>Informativa sulla Privacy e Protezione Dati</p>
+                </div>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="langBtn" aria-label="Seleziona lingua" aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                    <span>Italiano</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="lang-dropdown" id="langDropdown" role="menu" aria-labelledby="langBtn">
+                    <a href="privacy-policy.html" class="lang-option active" role="menuitem">
+                        <span class="lang-flag">🇮🇹</span>
+                        <span class="lang-name">Italiano</span>
+                        <span class="lang-badge">ATTIVO</span>
+                    </a>
+                    <a href="privacy-policy-en.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                        <span class="lang-badge">COMING</span>
+                    </a>
+                    <a href="privacy-policy-es.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇪🇸</span>
+                        <span class="lang-name">Español</span>
+                        <span class="lang-badge">COMING</span>
+                    </a>
+                    <a href="privacy-policy-pt.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇵🇹</span>
+                        <span class="lang-name">Português</span>
+                        <span class="lang-badge">COMING</span>
+                    </a>
+                    <a href="privacy-policy-fr.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇫🇷</span>
+                        <span class="lang-name">Français</span>
+                        <span class="lang-badge">COMING</span>
+                    </a>
+                    <a href="privacy-policy-de.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇩🇪</span>
+                        <span class="lang-name">Deutsch</span>
+                        <span class="lang-badge">COMING</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="policy-container">
+            <div class="policy-section">
+                <h1 class="section-title">INFORMATIVA SULLA PRIVACY</h1>
+                <p><strong>Ultimo aggiornamento:</strong> 1 Febbraio 2026</p>
+                <p><strong>Versione:</strong> 2.0</p>
+                
+                <div class="in-short">
+                    <strong>In sintesi:</strong> Questa Informativa spiega come l'app <strong>"How Much - Preventivi"</strong> (da ora "App"), sviluppata individualmente da <strong>Alessio Di Pede</strong>, raccoglie, utilizza e protegge i tuoi dati personali. Rispettiamo il GDPR (UE), LGPD (Brasile), POPIA (Sudafrica) e tutte le leggi sulla privacy applicabili.
+                </div>
+                
+                <p>Questa Informativa si applica a tutti gli utenti dell'App, sia nella versione gratuita che Premium, in <strong>tutti i Paesi in cui l'App è disponibile</strong> (Europa, Sud America, ecc.).</p>
+                
+                <p>Se hai domande, contattami a: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">1. CHI SONO (TITOLARE DEL TRATTAMENTO)</h2>
+                <p><strong>Alessio Di Pede</strong><br>
+                Sviluppatore individuale<br>
+                Email: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a><br>
+                Sede: Italia</p>
+                <p>Sono l'unico responsabile delle decisioni su come e perché i tuoi dati vengono trattati.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">2. QUALI DATI RACCOLGO E PERCHÉ</h2>
+                <p>Il trattamento è <strong>diverso per utenti gratuiti e Premium</strong>:</p>
+                
+                <h3>A) PER TUTTI GLI UTENTI (gratuiti e Premium):</h3>
+                <ul>
+                    <li><strong>Dati tecnici automatici:</strong> Tipo di dispositivo, sistema operativo, versione App, indirizzo IP (anonimizzato), orari di utilizzo, funzioni usate. Questi dati <strong>NON ti identificano personalmente</strong>.</li>
+                    <li><strong>Dati per pubblicità (solo versione gratuita):</strong> L'App mostra annunci tramite <strong>Google AdMob e Meta Audience Network</strong>. Per mostrare annunci rilevanti, possono essere raccolti l'ID pubblicitario del dispositivo (AAID/IDFA) e dati generali sull'utilizzo. La personalizzazione degli annunci può essere disattivata nelle impostazioni del tuo dispositivo.</li>
+                    <li><strong>Permessi dispositivo:</strong>
+                        <ul>
+                            <li><strong>Archivio/Foto (opzionale):</strong> Richiesto per salvare i PDF dei preventivi sul tuo dispositivo e condividerli (WhatsApp, email, ecc.) e per <strong>aggiungere un logo dalla galleria o fotocamera</strong>. Le foto usate come logo <strong>NON vengono MAI caricate sui nostri server né salvate nel cloud</strong>; vengono usate solo localmente per generare il PDF.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>B) SOLO UTENTI PREMIUM:</h3>
+                <ul>
+                    <li><strong>Account:</strong> Per salvare i preventivi nel cloud e sincronizzarli tra dispositivi, è necessario creare un account con un <strong>indirizzo email</strong>. Salviamo solo l'email per l'accesso.</li>
+                    <li><strong>Dati dei preventivi (forniti volontariamente da TE):</strong> Quando crei un preventivo e scegli di salvarlo nel cloud, i dati che inserisci <strong>vengono memorizzati sui server sicuri di Google Firebase (Firestore)</strong>. Questi possono includere:
+                        <ul>
+                            <li>Tue informazioni: Nome, cognome, numero di telefono, Partita IVA/P.IVA, email aziendale, logo.</li>
+                            <li>Informazioni del cliente: Nome, cognome, telefono, P.IVA/CF, indirizzo.</li>
+                            <li>Dettagli del preventivo: Servizi, prezzi, IVA, note.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="in-short">
+                    <strong>Importante:</strong> Come utente <strong>GRATUITO</strong>, <strong>nessun dato personale</strong> lascia il tuo dispositivo. Tutto viene salvato localmente (local storage) e sei l'unico ad avervi accesso.
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">3. BASI GIURIDICHE (PERCHÉ POSSIAMO TRATTARE I TUOI DATI)</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Finalità</th>
+                            <th>Quali Dati</th>
+                            <th>Base Giuridica (GDPR/LGPD/POPIA)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fornire funzionalità base (crea, salva locale, PDF)</td>
+                            <td>Dati tecnici, permesso archivio</td>
+                            <td><strong>Esecuzione del contratto</strong> (l'App deve funzionare)</td>
+                        </tr>
+                        <tr>
+                            <td>Gestire account Premium e sincronizzazione cloud</td>
+                            <td>Email, dati preventivi</td>
+                            <td><strong>Esecuzione del contratto</strong> (servizio Premium pagato)</td>
+                        </tr>
+                        <tr>
+                            <td>Mostrare pubblicità (versione gratuita)</td>
+                            <td>ID pubblicitario, dati utilizzo</td>
+                            <td><strong>Tuoi consenso</strong> (gestibile nelle impostazioni del dispositivo)</td>
+                        </tr>
+                        <tr>
+                            <td>Analisi e miglioramento App (stabilità, crash)</td>
+                            <td>Dati tecnici anonimi</td>
+                            <td><strong>Legittimo interesse</strong> (migliorare l'App per tutti)</td>
+                        </tr>
+                        <tr>
+                            <td>Rispondere a richieste di supporto</td>
+                            <td>Email, dati che ci fornisci</td>
+                            <td><strong>Legittimo interesse</strong> / misure precontrattuali</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">4. CON CHI CONDIVIDIAMO I DATI</h2>
+                <p><strong>Non vendiamo MAI i tuoi dati.</strong> Li condividiamo solo con fornitori essenziali ("Responsabili del trattamento"):</p>
+                <ul>
+                    <li><strong>Google Firebase (Google Cloud Platform):</strong> Ospita il database (Firestore) dove gli utenti Premium salvano i preventivi. I server sono sicuri e ubicati in UE/US a seconda della regione. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy di Google</a>.</li>
+                    <li><strong>Google AdMob & Meta Audience Network:</strong> Per gestire gli annunci pubblicitari. <a href="https://www.facebook.com/privacy/policy/" target="_blank">Privacy Policy di Meta</a>.</li>
+                    <li><strong>Store di pagamento:</strong> Se acquisti il Premium tramite <strong>Apple App Store o Google Play Store</strong>, loro gestiscono i dati di pagamento. Non ricevo mai la tua carta di credito.</li>
+                    <li><strong>RevenueCat (opzionale):</strong> Potrei usare questo servizio per gestire gli abbonamenti Premium. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy di RevenueCat</a>.</li>
+                </ul>
+                <p>Con tutti questi fornitori abbiamo accordi contrattuali che li obbligano a proteggere i tuoi dati e a usarli solo come da nostra istruzione.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">5. TRASFERIMENTI INTERNAZIONALI</h2>
+                <p>I nostri fornitori (Google, Meta) possono trattare dati in paesi al di fuori della tua regione (es. USA). Questi trasferimenti avvengono sempre nel rispetto di:</p>
+                <ul>
+                    <li><strong>Decisioni di Adeguatezza UE</strong> (es. Privacy Shield sostituito da Data Privacy Framework USA-UE)</li>
+                    <li><strong>Clausole Contrattuali Standard (SCC)</strong> approvate dalla Commissione Europea</li>
+                    <li><strong>LGPD (Brasile):</strong> Trasferimenti a paesi con livello adeguato di protezione o con garanzie</li>
+                    <li><strong>POPIA (Sudafrica):</strong> Autorizzazione dal Information Regulator o adeguate garanzie</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">6. CONSERVAZIONE DEI DATI (QUANTO LI TENIAMO)</h2>
+                <ul>
+                    <li><strong>Utenti gratuiti:</strong> I dati salvati localmente rimangono sul tuo dispositivo finché non cancelli l'App o i dati. Noi non li conserviamo.</li>
+                    <li><strong>Utenti Premium:</strong> I tuoi dati (email e preventivi) vengono conservati <strong>fino a quando mantieni l'account attivo</strong>. Alla cancellazione dell'account, i dati vengono eliminati dai nostri server entro <strong>30 giorni</strong> (salvo obblighi di legge).</li>
+                    <li><strong>Dati tecnici anonimi:</strong> Conservati per massimo <strong>24 mesi</strong> per analisi aggregate.</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">7. I TUOI DIRITTI (GDPR, LGPD, POPIA, CCPA, ECC.)</h2>
+                <p>A seconda della tua residenza, hai diritti specifici:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Diritto</th>
+                            <th>Descrizione</th>
+                            <th>Come esercitarlo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Accesso</strong> (Art. 15 GDPR, Art. 18 LGPD)</td>
+                            <td>Ottenere copia dei dati che ti riguardano</td>
+                            <td>Email a: howmuch.preventivi@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rettifica</strong> (Art. 16 GDPR, Art. 18 LGPD)</td>
+                            <td>Correggere dati inesatti</td>
+                            <td>Modifica direttamente nell'App o contattaci</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cancellazione ("Diritto all'oblio")</strong> (Art. 17 GDPR, Art. 18 LGPD)</td>
+                            <td>Far cancellare i tuoi dati</td>
+                            <td>Cancella l'account nell'App o richiedilo via email</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Limitazione del trattamento</strong> (Art. 18 GDPR)</td>
+                            <td>Sospendere temporaneamente il trattamento</td>
+                            <td>Email a: howmuch.preventivi@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Portabilità dei dati</strong> (Art. 20 GDPR)</td>
+                            <td>Ricevere i tuoi dati in formato strutturato</td>
+                            <td>Email a: howmuch.preventivi@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Opposizione</strong> (Art. 21 GDPR, Art. 18 LGPD)</td>
+                            <td>Opporti al trattamento per motivi legittimi</td>
+                            <td>Disattiva nelle impostazioni o contattaci</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Revoca del consenso</strong> (Art. 7 GDPR, Art. 8 LGPD)</td>
+                            <td>Revocare il consenso in qualsiasi momento</td>
+                            <td>Impostazioni dispositivo (per ads) o email</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Non essere soggetto a decisioni automatizzate</strong></td>
+                            <td>Nessun processo decisionale solo automatizzato</td>
+                            <td>Non applichiamo decisioni solo automatizzate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CCPA/CPRA (California): "Do Not Sell My Personal Information"</strong></td>
+                            <td>Diritto di opt-out dalla vendita dati</td>
+                            <td><strong>Non vendiamo dati</strong>. Per opt-out generale: email</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Risponderemo a tutte le richieste entro 30 giorni (o termini previsti dalla legge locale).</strong></p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">8. SICUREZZA DEI DATI</h2>
+                <p>Implementiamo misure tecniche e organizzative per proteggere i tuoi dati:</p>
+                <ul>
+                    <li><strong>Firebase Security Rules:</strong> Accesso ai dati solo per utenti autorizzati</li>
+                    <li><strong>Crittografia:</strong> Dati in transito (HTTPS/TLS) e a riposo (Firestore encryption)</li>
+                    <li><strong>Accesso limitato:</strong> Solo io (Alessio Di Pede) ho accesso amministrativo</li>
+                    <li><strong>Valutazione periodica del rischio</strong></li>
+                </ul>
+                <p>Tuttavia, <strong>nessun sistema è immune al 100%</strong>. In caso di violazione dati che comporti rischio per i tuoi diritti, ti notificheremo e segnaleremo l'incidente all'Autorità competente entro i termini di legge (72h per GDPR).</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">9. COOKIE E TECNOLOGIE SIMILI</h2>
+                <p>L'App <strong>non utilizza cookie tradizionali</strong>. Utilizziamo:</p>
+                <ul>
+                    <li><strong>Local Storage:</strong> Per salvare preferenze e preventivi localmente (sul tuo dispositivo)</li>
+                    <li><strong>Identificatori dispositivo:</strong> Per analisi anonime (Crashlytics) e pubblicità (AdMob)</li>
+                    <li><strong>Pixel di tracciamento:</strong> Solo per misurare performance annunci (Meta, Google)</li>
+                </ul>
+                <p>Puoi gestire le preferenze per la personalizzazione degli annunci nelle impostazioni del tuo dispositivo (iOS: Settings > Privacy > Tracking; Android: Settings > Google > Ads).</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">10. MINORI</h2>
+                <p>L'App <strong>non è rivolta a minori di 16 anni</strong> (o età minima richiesta nel tuo paese). Non raccogliamo consapevolmente dati di minori. Se sei un genitore e scopri che tuo figlio ci ha fornito dati, contattami per la cancellazione immediata.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">11. MODIFICHE A QUESTA INFORMATIVA</h2>
+                <p>Aggiornerò questa Informativa quando necessario (cambiamenti normativi, nuove funzionalità). La versione aggiornata avrà una nuova data in alto. Cambiamenti significativi saranno comunicati via email (per utenti Premium) o tramite notifica in App.</p>
+                <p><strong>Ti invito a consultare periodicamente questa pagina.</strong></p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">12. CONTATTI E AUTORITÀ DI CONTROLLO</h2>
+                <p>Per esercitare i tuoi diritti o per domande:</p>
+                <p><strong>Alessio Di Pede</strong><br>
+                Email: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+                
+                <p><strong>Autorità di protezione dati competenti:</strong></p>
+                <ul>
+                    <li><strong>Italia:</strong> Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank">garanteprivacy.it</a>)</li>
+                    <li><strong>UE/SEE:</strong> Autorità del tuo Stato membro (<a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">Elenco autorità EDPB</a>)</li>
+                    <li><strong>UK:</strong> Information Commissioner's Office (<a href="https://ico.org.uk" target="_blank">ico.org.uk</a>)</li>
+                    <li><strong>Brasile:</strong> Autoridade Nacional de Proteção de Dados - ANPD</li>
+                    <li><strong>Sudafrica:</strong> Information Regulator South Africa</li>
+                    <li><strong>Svizzera:</strong> Preposito federale alla protezione dei dati (<a href="https://www.edoeb.admin.ch" target="_blank">edoeb.admin.ch</a>)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p><strong>How Much - Preventivi</strong> - App di Preventivi per Professionisti</p>
+            <div class="contact-info">
+                <p>Sviluppatore: Alessio Di Pede</p>
+                <p>Email: <a href="mailto:howmuch.preventivi@gmail.com" style="color:#93c5fd;">howmuch.preventivi@gmail.com</a></p>
+                <p>Sede: Italia</p>
+            </div>
+            <div class="copyright">
+                <p>© 2024-2026 Alessio Di Pede. Tutti i diritti riservati.</p>
+                <p>Questa Informativa è conforme a: GDPR (Regolamento UE 2016/679), LGPD (Legge n. 13.709/2018 Brasile), POPIA (Act 4 of 2013 Sudafrica), CCPA/CPRA (California), PIPEDA (Canada), e altre leggi sulla privacy applicabili.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Dropdown Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const langBtn = document.getElementById('langBtn');
+            const langDropdown = document.getElementById('langDropdown');
+            
+            // Toggle dropdown
+            langBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isExpanded = langBtn.getAttribute('aria-expanded') === 'true';
+                langBtn.setAttribute('aria-expanded', !isExpanded);
+                langDropdown.classList.toggle('show');
+                
+                // Update chevron icon
+                const chevron = langBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = !isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!langDropdown.contains(e.target) && !langBtn.contains(e.target)) {
+                    langDropdown.classList.remove('show');
+                    langBtn.setAttribute('aria-expanded', 'false');
+                    
+                    // Reset chevron icon
+                    const chevron = langBtn.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Close dropdown on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    langDropdown.classList.remove('show');
+                    langBtn.setAttribute('aria-expanded', 'false');
+                    
+                    // Reset chevron icon
+                    const chevron = langBtn.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Highlight current page in dropdown
+            const currentPath = window.location.pathname;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            langOptions.forEach(option => {
+                const optionPath = option.getAttribute('href');
+                if (currentPath.includes(optionPath) || 
+                    (currentPath.includes('privacy-policy.html') && optionPath === 'privacy-policy.html')) {
+                    option.classList.add('active');
+                    option.setAttribute('aria-current', 'page');
+                }
+            });
+            
+            // Add smooth scroll for anchor links within the page
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            e.preventDefault();
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Add print button functionality
+            const printBtn = document.createElement('button');
+            printBtn.innerHTML = '<i class="fas fa-print"></i> Stampa';
+            printBtn.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+                box-shadow: var(--shadow);
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 500;
+            `;
+            printBtn.addEventListener('click', () => window.print());
+            document.body.appendChild(printBtn);
+            
+            // Add responsive behavior for print button
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 768) {
+                    printBtn.style.bottom = '10px';
+                    printBtn.style.right = '10px';
+                    printBtn.style.padding = '8px 12px';
+                    printBtn.style.fontSize = '14px';
+                } else {
+                    printBtn.style.bottom = '20px';
+                    printBtn.style.right = '20px';
+                    printBtn.style.padding = '10px 15px';
+                    printBtn.style.fontSize = '16px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
