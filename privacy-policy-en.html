@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - How Much - Estimates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #333;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Language Selector */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .app-name h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .app-name p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+            z-index: 10;
+            margin-top: 0.5rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .lang-dropdown.show {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.2s;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background: var(--light-bg);
+            color: var(--primary-color);
+        }
+
+        .lang-option.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-option.active:hover {
+            background: var(--secondary-color);
+        }
+
+        .lang-flag {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .lang-name {
+            flex-grow: 1;
+        }
+
+        .lang-badge {
+            background: var(--light-bg);
+            color: var(--secondary-color);
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .policy-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin: 1.8rem 0 1rem 0;
+        }
+
+        .in-short {
+            background: var(--light-bg);
+            padding: 1.2rem;
+            border-left: 4px solid var(--primary-color);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .in-short strong {
+            color: var(--secondary-color);
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background: var(--primary-color);
+            color: white;
+            text-align: left;
+            padding: 1rem;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .data-table tr:hover {
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        /* Lists */
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: #cbd5e1;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .language-selector {
+                align-self: flex-end;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .lang-dropdown {
+                min-width: 180px;
+            }
+            
+            .policy-container {
+                padding: 1.5rem;
+            }
+            
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .lang-btn {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                text-align: left;
+                align-items: flex-start;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .lang-btn span:not(.fa) {
+                display: none;
+            }
+            
+            .lang-btn {
+                padding: 0.5rem;
+            }
+            
+            .lang-btn i:first-child {
+                margin-right: 0;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            header, footer, .language-selector {
+                display: none;
+            }
+            
+            .policy-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-section">
+                <div class="logo">HM</div>
+                <div class="app-name">
+                    <h1>How Much - Estimates</h1>
+                    <p>Privacy Policy and Data Protection</p>
+                </div>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="langBtn" aria-label="Select language" aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                    <span>English</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="lang-dropdown" id="langDropdown" role="menu" aria-labelledby="langBtn">
+                    <a href="privacy-policy.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇮🇹</span>
+                        <span class="lang-name">Italiano</span>
+                    </a>
+                    <a href="privacy-policy-en.html" class="lang-option active" role="menuitem">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                        <span class="lang-badge">ACTIVE</span>
+                    </a>
+                    <a href="privacy-policy-es.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇪🇸</span>
+                        <span class="lang-name">Español</span>
+                    </a>
+                    <a href="privacy-policy-pt.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇵🇹</span>
+                        <span class="lang-name">Português</span>
+                    </a>
+                    <a href="privacy-policy-fr.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇫🇷</span>
+                        <span class="lang-name">Français</span>
+                    </a>
+                    <a href="privacy-policy-de.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇩🇪</span>
+                        <span class="lang-name">Deutsch</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="policy-container">
+            <div class="policy-section">
+                <h1 class="section-title">PRIVACY POLICY</h1>
+                <p><strong>Last Updated:</strong> February 1, 2026</p>
+                <p><strong>Version:</strong> 2.0</p>
+                
+                <div class="in-short">
+                    <strong>In short:</strong> This Policy explains how the <strong>"How Much - Estimates"</strong> application (hereinafter "App"), developed individually by <strong>Alessio Di Pede</strong>, collects, uses, and protects your personal data. We respect the <strong>GDPR (EU/EEA/UK)</strong>, <strong>LGPD (Brazil)</strong>, <strong>POPIA (South Africa)</strong>, <strong>LOPDGDD 3/2018 (Spain)</strong>, <strong>Law 25.326 (Argentina)</strong>, <strong>Law 19.628 (Chile)</strong>, <strong>Law 1581 of 2012 (Colombia)</strong>, <strong>Law 29733 (Peru)</strong> and all applicable privacy laws.
+                </div>
+                
+                <p>This Policy applies to all App users, both free and Premium versions, in <strong>all countries where the App is available</strong> (Europe, South America, North America, Africa, Asia).</p>
+                
+                <p>If you have questions, contact me at: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">1. WHO I AM (DATA CONTROLLER)</h2>
+                <p><strong>Alessio Di Pede</strong><br>
+                Data Controller / Controlador (LGPD) / Responsible Party (POPIA)<br>
+                Email: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a><br>
+                Address: Via Flacca 1195, Terracina, 04019 Latina, Italy<br>
+                Legal domicile: Italy</p>
+                
+                <p><strong>Data Protection Officer (DPO) / Encarregado (LGPD):</strong><br>
+                Not appointed as I do not fall under the cases of obligation per Art. 37 GDPR.<br>
+                For privacy matters: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+                
+                <p>I am solely responsible for decisions on how and why your data is processed.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">2. WHAT DATA I COLLECT AND WHY</h2>
+                <p>The processing is <strong>different for free and Premium users</strong>:</p>
+                
+                <h3>A) FOR ALL USERS (free and Premium):</h3>
+                <ul>
+                    <li><strong>Automatic technical data:</strong> Device type, operating system, App version, IP address (anonymized), usage times, functions used. This data <strong>does NOT personally identify you</strong>.</li>
+                    <li><strong>Advertising data (free version only):</strong> The App displays ads via <strong>Google AdMob and Meta Audience Network</strong>. To show relevant ads, the device's advertising ID (AAID/IDFA) and general usage data may be collected. Ad personalization can be disabled in your device settings.</li>
+                    <li><strong>Device permissions:</strong>
+                        <ul>
+                            <li><strong>Storage/Photos (optional):</strong> Required to save estimate PDFs to your device and share them (WhatsApp, email, etc.) and to <strong>add a logo from gallery or camera</strong>. Photos used as logos are <strong>NEVER uploaded to our servers or saved to the cloud</strong>; they are used only locally to generate the PDF.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>B) PREMIUM USERS ONLY:</h3>
+                <ul>
+                    <li><strong>Account:</strong> To save estimates in the cloud and sync between devices, you need to create an account with an <strong>email address</strong>. We only save the email for access.</li>
+                    <li><strong>Estimate data (voluntarily provided by YOU):</strong> When you create an estimate and choose to save it to the cloud, the data you enter <strong>is stored on Google Firebase's secure servers (Firestore)</strong>. This may include:
+                        <ul>
+                            <li>Your information: Name, surname, phone number, NIF/CIF (Spain), P.IVA/CF (Italy), CPF/CNPJ (Brazil), RUT (Chile), CUIT/CUIL (Argentina), NIT (Colombia), RUC (Peru), business email, logo.</li>
+                            <li>Customer information: Name, surname, phone, NIF/CIF/CPF/CNPJ/RUT/CUIT/NIT/RUC, address.</li>
+                            <li>Estimate details: Services, prices, VAT/IVA/IGV, notes.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="in-short">
+                    <strong>Important:</strong> As a <strong>FREE user</strong>, <strong>no personal data</strong> leaves your device. Everything is saved locally (local storage) and only you have access.
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">3. LEGAL BASES (WHY WE CAN PROCESS YOUR DATA)</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Purpose</th>
+                            <th>What Data</th>
+                            <th>Legal Basis (GDPR/LGPD/POPIA/South American Laws)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Provide basic functionality (create, save locally, PDF)</td>
+                            <td>Technical data, storage permission</td>
+                            <td><strong>Contract performance</strong> (the App must function) - Art. 6.1.b GDPR, Art. 7 LGPD, Section 11 POPIA</td>
+                        </tr>
+                        <tr>
+                            <td>Manage Premium account and cloud sync</td>
+                            <td>Email, estimate data</td>
+                            <td><strong>Contract performance</strong> (paid Premium service) - Art. 6.1.b GDPR, Art. 7 LGPD</td>
+                        </tr>
+                        <tr>
+                            <td>Display advertising (free version)</td>
+                            <td>Advertising ID, usage data</td>
+                            <td><strong>Your consent</strong> (manageable in device settings) - Art. 6.1.a GDPR, Art. 7 LGPD, Section 11 POPIA</td>
+                        </tr>
+                        <tr>
+                            <td>Analysis and App improvement (stability, crashes)</td>
+                            <td>Anonymous technical data</td>
+                            <td><strong>Legitimate interest</strong> (improve App for everyone) - Art. 6.1.f GDPR, Art. 10 LGPD</td>
+                        </tr>
+                        <tr>
+                            <td>Respond to support requests</td>
+                            <td>Email, data you provide</td>
+                            <td><strong>Legitimate interest</strong> / pre-contractual measures - Art. 6.1.f GDPR, Section 11 POPIA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">4. WHO WE SHARE DATA WITH</h2>
+                <p><strong>We NEVER sell your data.</strong> We share it only with essential providers ("Processors"):</p>
+                <ul>
+                    <li><strong>Google Firebase (Google Cloud Platform):</strong> Hosts the database (Firestore) where Premium users save estimates. Servers are secure and located in EU/US depending on region. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+                    <li><strong>Google AdMob & Meta Audience Network:</strong> To manage advertising. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta Privacy Policy</a>.</li>
+                    <li><strong>Payment stores:</strong> If you purchase Premium through <strong>Apple App Store or Google Play Store</strong>, they handle payment data. I never receive your credit card.</li>
+                    <li><strong>RevenueCat (optional):</strong> I may use this service to manage Premium subscriptions. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a>.</li>
+                </ul>
+                <p>We have contractual agreements with all these providers requiring them to protect your data and use it only according to our instructions.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">5. INTERNATIONAL TRANSFERS</h2>
+                <p>Our providers may process data in countries outside your region:</p>
+                <ul>
+                    <li><strong>Google (USA):</strong> Transfers are based on the European Commission's <strong>Standard Contractual Clauses (SCC)</strong> (Decision 2021/914) and the <strong>EU-US Data Privacy Framework</strong> (adequacy 10.07.2023, European Commission).</li>
+                    <li><strong>Meta (USA):</strong> Similarly based on SCC and Data Privacy Framework.</li>
+                    <li><strong>LGPD (Brazil):</strong> Transfers are made to countries with adequate protection level recognized by ANPD or with specific contractual guarantees per Art. 33 and 34 LGPD.</li>
+                    <li><strong>POPIA (South Africa):</strong> Transfers respect conditions of Section 72 of POPIA Act and authorizations from the Information Regulator.</li>
+                    <li><strong>Argentina (Law 25.326):</strong> Transfers respect Decree 1558/2001 and authorizations from the National Directorate of Personal Data Protection.</li>
+                    <li><strong>Chile (Law 19.628):</strong> Transfers respect adequate protection standards under Chilean regulations.</li>
+                    <li><strong>Colombia (Law 1581):</strong> Transfers respect authorizations from the Superintendency of Industry and Commerce.</li>
+                    <li><strong>Peru (Law 29733):</strong> Transfers respect conditions of adequate protection.</li>
+                    <li><strong>Spain (LOPDGDD):</strong> Transfers respect adequate safeguards under GDPR.</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">6. DATA RETENTION (HOW LONG WE KEEP DATA)</h2>
+                <ul>
+                    <li><strong>Free users:</strong> Data saved locally remains on your device until you delete the App or the data. We do not retain it.</li>
+                    <li><strong>Premium users:</strong> Your data (email and estimates) is retained <strong>while you maintain an active account</strong>. Upon account cancellation, data is deleted from our servers within:
+                        <ul>
+                            <li><strong>30 days</strong> for GDPR and European standards</li>
+                            <li><strong>15 business days</strong> for LGPD (Brazil) upon request</li>
+                            <li><strong>Reasonable period</strong> for POPIA (South Africa) and South American laws</li>
+                            <li><strong>10 days</strong> for Law 1581 (Colombia)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Anonymous technical data:</strong> Retained for maximum <strong>24 months</strong> for aggregate analysis.</li>
+                    <li><strong>Data for legal obligations:</strong> Retained for the period required by tax and commercial laws of each country (typically 5-10 years).</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">7. YOUR RIGHTS (GDPR, LGPD, POPIA, SOUTH AMERICAN LAWS)</h2>
+                <p>Depending on your residence, you have specific rights:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Right</th>
+                            <th>Description</th>
+                            <th>Response Timeframes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Access</strong> (Art. 15 GDPR, Art. 18 LGPD, Sec. 23 POPIA)</td>
+                            <td>Obtain copy of your data</td>
+                            <td>30 days (GDPR)<br>15 days (LGPD)<br>Reasonable period (POPIA)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rectification</strong> (Art. 16 GDPR, Art. 18 LGPD)</td>
+                            <td>Correct inaccurate data</td>
+                            <td>Modify in App or 30 days</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Erasure ("Right to be forgotten")</strong> (Art. 17 GDPR, Art. 18 LGPD)</td>
+                            <td>Request deletion of your data</td>
+                            <td>30 days (GDPR)<br>15 days (LGPD)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Restriction of processing</strong> (Art. 18 GDPR)</td>
+                            <td>Temporarily suspend processing</td>
+                            <td>30 days</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data portability</strong> (Art. 20 GDPR, Art. 18 LGPD)</td>
+                            <td>Receive your data in structured format</td>
+                            <td>30 days</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Objection</strong> (Art. 21 GDPR, Art. 18 LGPD)</td>
+                            <td>Object to processing for legitimate reasons</td>
+                            <td>Immediate in App settings</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Withdraw consent</strong> (Art. 7 GDPR, Art. 8 LGPD)</td>
+                            <td>Withdraw consent at any time</td>
+                            <td>Immediate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Habeas Data</strong> (Colombia, Peru, Argentina Laws)</td>
+                            <td>Constitutional rights over personal data</td>
+                            <td>Specific legal terms</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Information and access</strong> (Art. 14 Law 25.326 Argentina)</td>
+                            <td>Know existence of databases</td>
+                            <td>5 business days</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CCPA/CPRA (California): "Do Not Sell My Personal Information"</strong></td>
+                            <td>Right to opt-out of data sale</td>
+                            <td><strong>We do not sell data</strong>. For general opt-out: 45 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>To exercise these rights, contact me at:</strong> <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+                <p><strong>We will respond to all requests within the timeframes provided by applicable local law.</strong></p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">8. DATA SECURITY</h2>
+                <p>We implement technical and organizational measures to protect your data:</p>
+                <ul>
+                    <li><strong>Firebase Security Rules:</strong> Data access only for authorized users</li>
+                    <li><strong>Encryption:</strong> Data in transit (HTTPS/TLS) and at rest (Firestore encryption)</li>
+                    <li><strong>Limited access:</strong> Only I (Alessio Di Pede) have administrative access</li>
+                    <li><strong>Periodic risk assessment</strong> and appropriate measures</li>
+                    <li><strong>Encrypted backups</strong> on secure servers</li>
+                </ul>
+                <p>However, <strong>no system is 100% immune</strong>. In case of a data breach involving risk to your rights:</p>
+                <ul>
+                    <li><strong>GDPR:</strong> Notification to Authority within 72 hours and to you without undue delay</li>
+                    <li><strong>LGPD:</strong> Communication to ANPD and data subjects in "reasonable time"</li>
+                    <li><strong>POPIA:</strong> Notification to Information Regulator and data subjects immediately</li>
+                    <li><strong>Argentina:</strong> Notification to National Directorate of Personal Data Protection</li>
+                    <li><strong>Colombia:</strong> Notification to Superintendency of Industry and Commerce</li>
+                    <li><strong>Spain:</strong> Notification to AEPD within 72 hours</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">9. COOKIES AND SIMILAR TECHNOLOGIES</h2>
+                <p>The App <strong>does not use traditional cookies</strong>. We use:</p>
+                <ul>
+                    <li><strong>Local Storage:</strong> To save preferences and estimates locally (on your device)</li>
+                    <li><strong>Device identifiers:</strong> For anonymous analytics (Crashlytics) and advertising (AdMob)</li>
+                    <li><strong>Tracking pixels:</strong> Only to measure ad performance (Meta, Google)</li>
+                </ul>
+                <p>You can manage advertising personalization preferences in your device settings:</p>
+                <ul>
+                    <li><strong>iOS:</strong> Settings > Privacy > Tracking</li>
+                    <li><strong>Android:</strong> Settings > Google > Ads > Reset advertising ID / Opt out of Ads Personalization</li>
+                    <li><strong>Huawei devices:</strong> Settings > Privacy > Advertising & Privacy</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">10. MINORS</h2>
+                <p>The App <strong>is not directed at minors</strong> according to the following minimum ages:</p>
+                <ul>
+                    <li><strong>EU/EEA/UK:</strong> 16 years (GDPR) or lower age if provided by Member State</li>
+                    <li><strong>Brazil:</strong> 18 years (LGPD) or 16-17 with parental consent</li>
+                    <li><strong>South Africa:</strong> 18 years (POPIA)</li>
+                    <li><strong>Argentina:</strong> 18 years (Law 25.326)</li>
+                    <li><strong>Chile:</strong> 18 years (Law 19.628)</li>
+                    <li><strong>Colombia:</strong> 18 years (Law 1581)</li>
+                    <li><strong>Peru:</strong> 18 years (Law 29733)</li>
+                    <li><strong>Spain:</strong> 14 years (LOPDGDD)</li>
+                    <li><strong>USA (COPPA):</strong> 13 years</li>
+                </ul>
+                <p>We do not knowingly collect data from minors. If you are a parent and discover your child has provided data to us, contact me for immediate deletion.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">11. CHANGES TO THIS POLICY</h2>
+                <p>I will update this Policy when necessary (regulatory changes, new features). The updated version will have a new date above. Significant changes will be communicated:</p>
+                <ul>
+                    <li><strong>Premium users:</strong> By email and App notification 30 days before</li>
+                    <li><strong>Free users:</strong> App notification on next launch</li>
+                    <li><strong>On the website:</strong> Immediate publication</li>
+                </ul>
+                <p><strong>I invite you to periodically check this page.</strong> Continued use of the App after changes constitutes acceptance of the new Policy.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">12. CONTACTS AND SUPERVISORY AUTHORITIES</h2>
+                <p>To exercise your rights or for questions:</p>
+                <p><strong>Alessio Di Pede</strong><br>
+                Email: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a><br>
+                Address: Via Flacca 1195, Terracina, 04019 Latina, Italy</p>
+                
+                <p><strong>Competent data protection authorities:</strong></p>
+                <ul>
+                    <li><strong>Italy:</strong> Garante per la protezione dei dati personali, Piazza di Monte Citorio n. 121, 00186 ROMA (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">garanteprivacy.it</a>)</li>
+                    <li><strong>EU/EEA:</strong> Authority of your Member State (<a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener noreferrer">List of EDPB authorities</a>)</li>
+                    <li><strong>UK:</strong> Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF (<a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>)</li>
+                    <li><strong>Spain:</strong> Agencia Española de Protección de Datos, C/ Jorge Juan, 6, 28001 Madrid (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">aepd.es</a>)</li>
+                    <li><strong>Brazil:</strong> Autoridade Nacional de Proteção de Dados - ANPD, Setor de Autarquias Sul, Quadra 01, Bloco C, Edifício Darcy Ribeiro, Brasília/DF (<a href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener noreferrer">gov.br/anpd</a>)</li>
+                    <li><strong>South Africa:</strong> Information Regulator South Africa, JD House, 27 Stiemens Street, Braamfontein, Johannesburg (<a href="https://www.justice.gov.za/inforeg/" target="_blank" rel="noopener noreferrer">justice.gov.za/inforeg</a>)</li>
+                    <li><strong>Argentina:</strong> Dirección Nacional de Protección de Datos Personales, Sarmiento 1118 5º piso, C1041AAX, Ciudad Autónoma de Buenos Aires (<a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank" rel="noopener noreferrer">argentina.gob.ar/aaip/datospersonales</a>)</li>
+                    <li><strong>Chile:</strong> Agencia de Protección de Datos Personales (in implementation phase)</li>
+                    <li><strong>Colombia:</strong> Superintendencia de Industria y Comercio - SIC, Carrera 13 No. 27 - 00, Bogotá (<a href="https://www.sic.gov.co" target="_blank" rel="noopener noreferrer">sic.gov.co</a>)</li>
+                    <li><strong>Peru:</strong> Dirección General de Transparencia, Acceso a la Información Pública y Protección de Datos Personales, Jirón Carabaya Cdra. 1 S/N, Lima (<a href="https://www.minjus.gob.pe/proteccion-de-datos-personales/" target="_blank" rel="noopener noreferrer">minjus.gob.pe</a>)</li>
+                    <li><strong>Mexico:</strong> Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI), Av. Insurgentes Sur 3211, Ciudad de México (<a href="https://home.inai.org.mx" target="_blank" rel="noopener noreferrer">home.inai.org.mx</a>)</li>
+                    <li><strong>Switzerland:</strong> Preposito federale alla protezione dei dati, Feldeggweg 1, CH-3003 Bern (<a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer">edoeb.admin.ch</a>)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p><strong>How Much - Estimates</strong> - Estimate App for Professionals</p>
+            <div class="contact-info">
+                <p>Controller: Alessio Di Pede</p>
+                <p>Email: <a href="mailto:howmuch.preventivi@gmail.com" style="color:#93c5fd;">howmuch.preventivi@gmail.com</a></p>
+                <p>Address: Via Flacca 1195, Terracina, 04019 Latina, Italy</p>
+            </div>
+            <div class="copyright">
+                <p>© 2024-2026 Alessio Di Pede. All rights reserved.</p>
+                <p>This Policy complies with: <strong>GDPR</strong> (EU Regulation 2016/679), <strong>LGPD</strong> (Law n. 13.709/2018 Brazil), <strong>POPIA</strong> (Act 4 of 2013 South Africa), <strong>LOPDGDD 3/2018</strong> (Spain), <strong>Law 25.326</strong> (Argentina), <strong>Law 19.628</strong> (Chile), <strong>Law 1581 of 2012</strong> (Colombia), <strong>Law 29733</strong> (Peru), <strong>CCPA/CPRA</strong> (California), <strong>PIPEDA</strong> (Canada), <strong>PDPA</strong> (Thailand), and other applicable privacy laws.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Dropdown Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const langBtn = document.getElementById('langBtn');
+            const langDropdown = document.getElementById('langDropdown');
+            
+            // Toggle dropdown
+            langBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isExpanded = langBtn.getAttribute('aria-expanded') === 'true';
+                langBtn.setAttribute('aria-expanded', !isExpanded);
+                langDropdown.classList.toggle('show');
+                
+                // Update chevron icon
+                const chevron = langBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = !isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!langDropdown.contains(e.target) && !langBtn.contains(e.target)) {
+                    langDropdown.classList.remove('show');
+                    langBtn.setAttribute('aria-expanded', 'false');
+                    
+                    // Reset chevron icon
+                    const chevron = langBtn.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Close dropdown on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    langDropdown.classList.remove('show');
+                    langBtn.setAttribute('aria-expanded', 'false');
+                    
+                    // Reset chevron icon
+                    const chevron = langBtn.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Highlight current page in dropdown
+            const currentPath = window.location.pathname;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            langOptions.forEach(option => {
+                const optionPath = option.getAttribute('href');
+                if (currentPath.includes(optionPath) || 
+                    (currentPath.includes('privacy-policy-en.html') && optionPath === 'privacy-policy-en.html')) {
+                    option.classList.add('active');
+                    option.setAttribute('aria-current', 'page');
+                }
+            });
+            
+            // Add smooth scroll for anchor links within the page
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            e.preventDefault();
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Add print button functionality
+            const printBtn = document.createElement('button');
+            printBtn.innerHTML = '<i class="fas fa-print"></i> Print';
+            printBtn.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+                box-shadow: var(--shadow);
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 500;
+            `;
+            printBtn.addEventListener('click', () => window.print());
+            document.body.appendChild(printBtn);
+            
+            // Add responsive behavior for print button
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 768) {
+                    printBtn.style.bottom = '10px';
+                    printBtn.style.right = '10px';
+                    printBtn.style.padding = '8px 12px';
+                    printBtn.style.fontSize = '14px';
+                } else {
+                    printBtn.style.bottom = '20px';
+                    printBtn.style.right = '20px';
+                    printBtn.style.padding = '10px 15px';
+                    printBtn.style.fontSize = '16px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
