@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka Prywatności - How Much - Oferty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #333;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Language Selector */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .app-name h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .app-name p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+            z-index: 10;
+            margin-top: 0.5rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .lang-dropdown.show {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.2s;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background: var(--light-bg);
+            color: var(--primary-color);
+        }
+
+        .lang-option.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .lang-option.active:hover {
+            background: var(--secondary-color);
+        }
+
+        .lang-flag {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .lang-name {
+            flex-grow: 1;
+        }
+
+        .lang-badge {
+            background: var(--light-bg);
+            color: var(--secondary-color);
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .policy-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin: 1.8rem 0 1rem 0;
+        }
+
+        .in-short {
+            background: var(--light-bg);
+            padding: 1.2rem;
+            border-left: 4px solid var(--primary-color);
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .in-short strong {
+            color: var(--secondary-color);
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background: var(--primary-color);
+            color: white;
+            text-align: left;
+            padding: 1rem;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: var(--light-bg);
+        }
+
+        .data-table tr:hover {
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        /* Lists */
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: #cbd5e1;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .language-selector {
+                align-self: flex-end;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            .lang-dropdown {
+                min-width: 180px;
+            }
+            
+            .policy-container {
+                padding: 1.5rem;
+            }
+            
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .lang-btn {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                text-align: left;
+                align-items: flex-start;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .lang-btn span:not(.fa) {
+                display: none;
+            }
+            
+            .lang-btn {
+                padding: 0.5rem;
+            }
+            
+            .lang-btn i:first-child {
+                margin-right: 0;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            header, footer, .language-selector {
+                display: none;
+            }
+            
+            .policy-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo-section">
+                <div class="logo">HM</div>
+                <div class="app-name">
+                    <h1>How Much - Oferty</h1>
+                    <p>Polityka Prywatności i Ochrona Danych</p>
+                </div>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="langBtn" aria-label="Wybierz język" aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                    <span>Polski</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="lang-dropdown" id="langDropdown" role="menu" aria-labelledby="langBtn">
+                    <a href="privacy-policy.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇮🇹</span>
+                        <span class="lang-name">Italiano</span>
+                    </a>
+                    <a href="privacy-policy-en.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                    </a>
+                    <a href="privacy-policy-es.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇪🇸</span>
+                        <span class="lang-name">Español</span>
+                    </a>
+                    <a href="privacy-policy-pt.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇵🇹</span>
+                        <span class="lang-name">Português</span>
+                    </a>
+                    <a href="privacy-policy-fr.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇫🇷</span>
+                        <span class="lang-name">Français</span>
+                    </a>
+                    <a href="privacy-policy-de.html" class="lang-option" role="menuitem">
+                        <span class="lang-flag">🇩🇪</span>
+                        <span class="lang-name">Deutsch</span>
+                    </a>
+                    <a href="privacy-policy-pl.html" class="lang-option active" role="menuitem">
+                        <span class="lang-flag">🇵🇱</span>
+                        <span class="lang-name">Polski</span>
+                        <span class="lang-badge">AKTYWNY</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="policy-container">
+            <div class="policy-section">
+                <h1 class="section-title">POLITYKA PRYWATNOŚCI</h1>
+                <p><strong>Ostatnia aktualizacja:</strong> 1 Lutego 2026</p>
+                <p><strong>Wersja:</strong> 2.0</p>
+                
+                <div class="in-short">
+                    <strong>W skrócie:</strong> Niniejsza Polityka wyjaśnia, jak aplikacja <strong>"How Much - Oferty"</strong> (zwana dalej "Aplikacją"), opracowana indywidualnie przez <strong>Alessio Di Pede</strong>, zbiera, wykorzystuje i chroni Twoje dane osobowe. Szanujemy <strong>RODO (UE/EOG/Wielka Brytania)</strong>, <strong>LGPD (Brazylia)</strong>, <strong>POPIA (Południowa Afryka)</strong>, <strong>LOPDGDD 3/2018 (Hiszpania)</strong>, <strong>Ustawę 25.326 (Argentyna)</strong>, <strong>Ustawę 19.628 (Chile)</strong>, <strong>Ustawę 1581 z 2012 (Kolumbia)</strong>, <strong>Ustawę 29733 (Peru)</strong> oraz wszystkie obowiązujące przepisy dotyczące prywatności.
+                </div>
+                
+                <p>Niniejsza Polityka ma zastosowanie do wszystkich użytkowników Aplikacji, zarówno w wersji darmowej, jak i Premium, we <strong>wszystkich krajach, w których Aplikacja jest dostępna</strong> (Europa, Ameryka Południowa, Ameryka Północna, Afryka, Azja).</p>
+                
+                <p>Jeśli masz pytania, skontaktuj się ze mną: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">1. KIM JESTEM (ADMINISTRATOR DANYCH)</h2>
+                <p><strong>Alessio Di Pede</strong><br>
+                Administrator Danych / Controlador (LGPD) / Responsible Party (POPIA)<br>
+                Email: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a><br>
+                Adres: Via Flacca 1195, Terracina, 04019 Latina, Włochy<br>
+                Siedziba prawna: Włochy</p>
+                
+                <p><strong>Inspektor Ochrony Danych (IOD) / Encarregado (LGPD):</strong><br>
+                Nie wyznaczony, ponieważ nie podlegam przypadkom obowiązku z Art. 37 RODO.<br>
+                W sprawach prywatności: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+                
+                <p>Jestem wyłącznie odpowiedzialny za decyzje dotyczące sposobu i celu przetwarzania Twoich danych.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">2. JAKIE DANE ZBIERAM I DLACZEGO</h2>
+                <p>Przetwarzanie jest <strong>różne dla użytkowników darmowych i Premium</strong>:</p>
+                
+                <h3>A) DLA WSZYSTKICH UŻYTKOWNIKÓW (darmowych i Premium):</h3>
+                <ul>
+                    <li><strong>Automatyczne dane techniczne:</strong> Typ urządzenia, system operacyjny, wersja Aplikacji, adres IP (anonimizowany), godziny korzystania, używane funkcje. Te dane <strong>NIE identyfikują Cię osobiście</strong>.</li>
+                    <li><strong>Dane reklamowe (tylko wersja darmowa):</strong> Aplikacja wyświetla reklamy za pośrednictwem <strong>Google AdMob i Meta Audience Network</strong>. Aby wyświetlać odpowiednie reklamy, mogą być zbierane identyfikator reklamowy urządzenia (AAID/IDFA) oraz ogólne dane dotyczące użytkowania. Personalizację reklam można wyłączyć w ustawieniach urządzenia.</li>
+                    <li><strong>Uprawnienia urządzenia:</strong>
+                        <ul>
+                            <li><strong>Pamięć/Zdjęcia (opcjonalnie):</strong> Wymagane do zapisywania PDF-ów ofert na Twoim urządzeniu i udostępniania ich (WhatsApp, email itp.) oraz do <strong>dodawania logo z galerii lub aparatu</strong>. Zdjęcia używane jako logo <strong>NIGDY nie są przesyłane na nasze serwery ani zapisywane w chmurze</strong>; są używane tylko lokalnie do generowania PDF.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>B) TYLKO UŻYTKOWNICY PREMIUM:</h3>
+                <ul>
+                    <li><strong>Konto:</strong> Aby zapisywać oferty w chmurze i synchronizować je między urządzeniami, musisz utworzyć konto z <strong>adresem email</strong>. Zapisujemy tylko email dla dostępu.</li>
+                    <li><strong>Dane ofert (dobrowolnie podane przez CIEBIE):</strong> Podczas tworzenia oferty i wyboru zapisania jej w chmurze, wprowadzane przez Ciebie dane <strong>są przechowywane na bezpiecznych serwerach Google Firebase (Firestore)</strong>. Mogą one obejmować:
+                        <ul>
+                            <li>Twoje dane: Imię, nazwisko, numer telefonu, NIF/CIF (Hiszpania), P.IVA/CF (Włochy), CPF/CNPJ (Brazylia), RUT (Chile), CUIT/CUIL (Argentyna), NIT (Kolumbia), RUC (Peru), email służbowy, logo.</li>
+                            <li>Dane klienta: Imię, nazwisko, telefon, NIF/CIF/CPF/CNPJ/RUT/CUIT/NIT/RUC, adres.</li>
+                            <li>Szczegóły oferty: Usługi, ceny, VAT/VAT/IVA/IGV, uwagi.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="in-short">
+                    <strong>Ważne:</strong> Jako użytkownik <strong>DARMOWY</strong>, <strong>żadne dane osobowe</strong> nie opuszczają Twojego urządzenia. Wszystko jest zapisywane lokalnie (pamięć lokalna) i tylko Ty masz do tego dostęp.
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">3. PODSTAWY PRAWNE (DLACZEGO MOŻEMY PRZETWARZAĆ TWOJE DANE)</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Cel</th>
+                            <th>Jakie Dane</th>
+                            <th>Podstawa Prawna (RODO/LGPD/POPIA/Ustawy Południowoamerykańskie)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Zapewnienie podstawowych funkcji (tworzenie, zapisywanie lokalnie, PDF)</td>
+                            <td>Dane techniczne, uprawnienie do pamięci</td>
+                            <td><strong>Wykonanie umowy</strong> (Aplikacja musi działać) - Art. 6.1.b RODO, Art. 7 LGPD, Sekcja 11 POPIA</td>
+                        </tr>
+                        <tr>
+                            <td>Zarządzanie kontem Premium i synchronizacją w chmurze</td>
+                            <td>Email, dane ofert</td>
+                            <td><strong>Wykonanie umowy</strong> (płatna usługa Premium) - Art. 6.1.b RODO, Art. 7 LGPD</td>
+                        </tr>
+                        <tr>
+                            <td>Wyświetlanie reklam (wersja darmowa)</td>
+                            <td>Identyfikator reklamowy, dane użycia</td>
+                            <td><strong>Twoja zgoda</strong> (można zarządzać w ustawieniach urządzenia) - Art. 6.1.a RODO, Art. 7 LGPD, Sekcja 11 POPIA</td>
+                        </tr>
+                        <tr>
+                            <td>Analiza i ulepszanie Aplikacji (stabilność, awarie)</td>
+                            <td>Anonimowe dane techniczne</td>
+                            <td><strong>Prawnie uzasadniony interes</strong> (ulepszanie Aplikacji dla wszystkich) - Art. 6.1.f RODO, Art. 10 LGPD</td>
+                        </tr>
+                        <tr>
+                            <td>Odpowiadanie na prośby o wsparcie</td>
+                            <td>Email, dane które nam podasz</td>
+                            <td><strong>Prawnie uzasadniony interes</strong> / środki przedumowne - Art. 6.1.f RODO, Sekcja 11 POPIA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">4. Z KIM DZIELIMY SIĘ DANymi</h2>
+                <p><strong>NIGDY nie sprzedajemy Twoich danych.</strong> Dzielimy się nimi tylko z niezbędnymi dostawcami ("Podmiotami przetwarzającymi"):</p>
+                <ul>
+                    <li><strong>Google Firebase (Google Cloud Platform):</strong> Hostuje bazę danych (Firestore), w której użytkownicy Premium zapisują oferty. Serwery są bezpieczne i zlokalizowane w UE/USA w zależności od regionu. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Polityka Prywatności Google</a>.</li>
+                    <li><strong>Google AdMob & Meta Audience Network:</strong> Do zarządzania reklamami. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Polityka Prywatności Meta</a>.</li>
+                    <li><strong>Sklepy z płatnościami:</strong> Jeśli kupisz Premium przez <strong>Apple App Store lub Google Play Store</strong>, oni zarządzają danymi płatności. Nigdy nie otrzymuję Twojej karty kredytowej.</li>
+                    <li><strong>RevenueCat (opcjonalnie):</strong> Mogę używać tej usługi do zarządzania subskrypcjami Premium. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">Polityka Prywatności RevenueCat</a>.</li>
+                </ul>
+                <p>Z wszystkimi tymi dostawcami mamy umowy zobowiązujące ich do ochrony Twoich danych i używania ich wyłącznie zgodnie z naszymi instrukcjami.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">5. TRANSFERY MIĘDZYNARODOWE</h2>
+                <p>Nasi dostawcy mogą przetwarzać dane w krajach poza Twoim regionem:</p>
+                <ul>
+                    <li><strong>Google (USA):</strong> Transfery opierają się na <strong>Standardowych Klauzulach Umownych (SCC)</strong> Komisji Europejskiej (Decyzja 2021/914) i <strong>Data Privacy Framework UE-USA</strong> (adekwatność 10.07.2023, Komisja Europejska).</li>
+                    <li><strong>Meta (USA):</strong> Podobnie oparte na SCC i Data Privacy Framework.</li>
+                    <li><strong>LGPD (Brazylia):</strong> Transfery dokonywane są do krajów z odpowiednim poziomem ochrony uznanym przez ANPD lub z konkretnymi gwarancjami umownymi zgodnie z Art. 33 i 34 LGPD.</li>
+                    <li><strong>POPIA (Południowa Afryka):</strong> Transfery respektują warunki Sekcji 72 POPIA Act i autoryzacje Information Regulator.</li>
+                    <li><strong>Argentyna (Ustawa 25.326):</strong> Transfery respektują Dekret 1558/2001 i autoryzacje Dirección Nacional de Protección de Datos Personales.</li>
+                    <li><strong>Chile (Ustawa 19.628):</strong> Transfery respektują odpowiednie standardy ochrony przewidziane przepisami chilijskimi.</li>
+                    <li><strong>Kolumbia (Ustawa 1581):</strong> Transfery respektują autoryzacje Superintendencia de Industria y Comercio.</li>
+                    <li><strong>Peru (Ustawa 29733):</strong> Transfery respektują warunki odpowiedniej ochrony.</li>
+                    <li><strong>Hiszpania (LOPDGDD):</strong> Transfery respektują odpowiednie zabezpieczenia zgodnie z RODO.</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">6. PRZECHOWYWANIE DANYCH (JAK DŁUGO PRZECHOWUJEMY)</h2>
+                <ul>
+                    <li><strong>Użytkownicy darmowi:</strong> Dane zapisane lokalnie pozostają na Twoim urządzeniu do czasu usunięcia Aplikacji lub danych. My ich nie przechowujemy.</li>
+                    <li><strong>Użytkownicy Premium:</strong> Twoje dane (email i oferty) są przechowywane <strong>dopóki utrzymujesz aktywne konto</strong>. Po anulowaniu konta dane są usuwane z naszych serwerów w ciągu:
+                        <ul>
+                            <li><strong>30 dni</strong> dla RODO i standardów europejskich</li>
+                            <li><strong>15 dni roboczych</strong> dla LGPD (Brazylia) na żądanie</li>
+                            <li><strong>Rozsądny termin</strong> dla POPIA (Południowa Afryka) i ustaw południowoamerykańskich</li>
+                            <li><strong>10 dni</strong> dla Ustawy 1581 (Kolumbia)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Anonimowe dane techniczne:</strong> Przechowywane maksymalnie <strong>24 miesiące</strong> dla analiz zagregowanych.</li>
+                    <li><strong>Dane dla obowiązków prawnych:</strong> Przechowywane przez okres wymagany przez przepisy podatkowe i handlowe każdego kraju (zwykle 5-10 lat).</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">7. TWOJE PRAWA (RODO, LGPD, POPIA, USTAWY POŁUDNIOWOAMERYKAŃSKIE)</h2>
+                <p>W zależności od miejsca zamieszkania masz określone prawa:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Prawo</th>
+                            <th>Opis</th>
+                            <th>Terminy Odpowiedzi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Dostęp</strong> (Art. 15 RODO, Art. 18 LGPD, Sek. 23 POPIA)</td>
+                            <td>Uzyskanie kopii swoich danych</td>
+                            <td>30 dni (RODO)<br>15 dni (LGPD)<br>Rozsądny termin (POPIA)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sprostowanie</strong> (Art. 16 RODO, Art. 18 LGPD)</td>
+                            <td>Poprawienie nieprawidłowych danych</td>
+                            <td>Modyfikacja w Aplikacji lub 30 dni</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Usunięcie ("Prawo do bycia zapomnianym")</strong> (Art. 17 RODO, Art. 18 LGPD)</td>
+                            <td>Żądanie usunięcia swoich danych</td>
+                            <td>30 dni (RODO)<br>15 dni (LGPD)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ograniczenie przetwarzania</strong> (Art. 18 RODO)</td>
+                            <td>Tymczasowe wstrzymanie przetwarzania</td>
+                            <td>30 dni</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Przenoszenie danych</strong> (Art. 20 RODO, Art. 18 LGPD)</td>
+                            <td>Otrzymanie danych w ustrukturyzowanym formacie</td>
+                            <td>30 dni</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sprzeciw</strong> (Art. 21 RODO, Art. 18 LGPD)</td>
+                            <td>Sprzeciw wobec przetwarzania z uzasadnionych powodów</td>
+                            <td>Natychmiast w ustawieniach Aplikacji</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wycofanie zgody</strong> (Art. 7 RODO, Art. 8 LGPD)</td>
+                            <td>Wycofanie zgody w dowolnym momencie</td>
+                            <td>Natychmiast</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Habeas Data</strong> (Ustawy Kolumbia, Peru, Argentyna)</td>
+                            <td>Konstytucyjne prawa do danych osobowych</td>
+                            <td>Określone terminy prawne</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Informacja i dostęp</strong> (Art. 14 Ustawa 25.326 Argentyna)</td>
+                            <td>Znajomość istnienia baz danych</td>
+                            <td>5 dni roboczych</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CCPA/CPRA (Kalifornia): "Nie sprzedawaj moich danych osobowych"</strong></td>
+                            <td>Prawo do rezygnacji ze sprzedaży danych</td>
+                            <td><strong>Nie sprzedajemy danych</strong>. Dla ogólnej rezygnacji: 45 dni</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Aby skorzystać z tych praw, skontaktuj się:</strong> <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
+                <p><strong>Odpowiemy na wszystkie prośby w terminach przewidzianych przez obowiązujące lokalne prawo.</strong></p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">8. BEZPIECZEŃSTWO DANYCH</h2>
+                <p>Wdrażamy środki techniczne i organizacyjne, aby chronić Twoje dane:</p>
+                <ul>
+                    <li><strong>Firebase Security Rules:</strong> Dostęp do danych tylko dla autoryzowanych użytkowników</li>
+                    <li><strong>Szyfrowanie:</strong> Dane w transmisji (HTTPS/TLS) i w spoczynku (szyfrowanie Firestore)</li>
+                    <li><strong>Ograniczony dostęp:</strong> Tylko ja (Alessio Di Pede) mam dostęp administracyjny</li>
+                    <li><strong>Okresowa ocena ryzyka</strong> i odpowiednie środki</li>
+                    <li><strong>Zaszyfrowane kopie zapasowe</strong> na bezpiecznych serwerach</li>
+                </ul>
+                <p>Jednak <strong>żaden system nie jest odporny w 100%</strong>. W przypadku naruszenia danych wiążącego się z ryzykiem dla Twoich praw:</p>
+                <ul>
+                    <li><strong>RODO:</strong> Powiadomienie Organu Nadzorczego w ciągu 72 godzin i Tobie bez nieuzasadnionej zwłoki</li>
+                    <li><strong>LGPD:</strong> Komunikacja do ANPD i osób zainteresowanych w "rozsądnym czasie"</li>
+                    <li><strong>POPIA:</strong> Natychmiastowe powiadomienie Information Regulator i osób zainteresowanych</li>
+                    <li><strong>Argentyna:</strong> Powiadomienie Dirección Nacional de Protección de Datos Personales</li>
+                    <li><strong>Kolumbia:</strong> Powiadomienie Superintendencia de Industria y Comercio</li>
+                    <li><strong>Hiszpania:</strong> Powiadomienie AEPD w ciągu 72 godzin</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">9. CIASTECZKA I PODOBNE TECHNOLOGIE</h2>
+                <p>Aplikacja <strong>nie używa tradycyjnych plików cookie</strong>. Używamy:</p>
+                <ul>
+                    <li><strong>Pamięci lokalnej:</strong> Do zapisywania preferencji i ofert lokalnie (na Twoim urządzeniu)</li>
+                    <li><strong>Identyfikatorów urządzenia:</strong> Do anonimowych analiz (Crashlytics) i reklam (AdMob)</li>
+                    <li><strong>Pixelów śledzących:</strong> Tylko do pomiaru wydajności reklam (Meta, Google)</li>
+                </ul>
+                <p>Możesz zarządzać preferencjami personalizacji reklam w ustawieniach urządzenia:</p>
+                <ul>
+                    <li><strong>iOS:</strong> Ustawienia > Prywatność > Śledzenie</li>
+                    <li><strong>Android:</strong> Ustawienia > Google > Reklamy > Zresetuj identyfikator reklam / Zrezygnuj z personalizacji reklam</li>
+                    <li><strong>Urządzenia Huawei:</strong> Ustawienia > Prywatność > Reklamy i prywatność</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">10. OSOBY NIELETNIE</h2>
+                <p>Aplikacja <strong>nie jest skierowana do osób nieletnich</strong> według następujących minimalnych wieku:</p>
+                <ul>
+                    <li><strong>UE/EOG/Wielka Brytania:</strong> 16 lat (RODO) lub niższy wiek jeśli przewidziany przez państwo członkowskie</li>
+                    <li><strong>Brazylia:</strong> 18 lat (LGPD) lub 16-17 za zgodą rodziców</li>
+                    <li><strong>Południowa Afryka:</strong> 18 lat (POPIA)</li>
+                    <li><strong>Argentyna:</strong> 18 lat (Ustawa 25.326)</li>
+                    <li><strong>Chile:</strong> 18 lat (Ustawa 19.628)</li>
+                    <li><strong>Kolumbia:</strong> 18 lat (Ustawa 1581)</li>
+                    <li><strong>Peru:</strong> 18 lat (Ustawa 29733)</li>
+                    <li><strong>Hiszpania:</strong> 14 lat (LOPDGDD)</li>
+                    <li><strong>USA (COPPA):</strong> 13 lat</li>
+                </ul>
+                <p>Świadomie nie zbieramy danych od osób nieletnich. Jeśli jesteś rodzicem i odkryjesz, że Twoje dziecko przekazało nam dane, skontaktuj się ze mną w celu natychmiastowego usunięcia.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">11. ZMIANY W TEJ POLITYCE</h2>
+                <p>Będę aktualizować tę Politykę w razie potrzeby (zmiany przepisów, nowe funkcje). Zaktualizowana wersja będzie miała nową datę powyżej. Znaczące zmiany będą komunikowane:</p>
+                <ul>
+                    <li><strong>Użytkownicy Premium:</strong> Przez email i powiadomienie w Aplikacji 30 dni wcześniej</li>
+                    <li><strong>Użytkownicy darmowi:</strong> Powiadomienie w Aplikacji przy następnym uruchomieniu</li>
+                    <li><strong>Na stronie internetowej:</strong> Natychmiastowa publikacja</li>
+                </ul>
+                <p><strong>Zachęcam do okresowego sprawdzania tej strony.</strong> Kontynuacja korzystania z Aplikacji po zmianach stanowi akceptację nowej Polityki.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">12. KONTAKTY I ORGANY NADZORCZE</h2>
+                <p>Aby skorzystać ze swoich praw lub w przypadku pytań:</p>
+                <p><strong>Alessio Di Pede</strong><br>
+                Email: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a><br>
+                Adres: Via Flacca 1195, Terracina, 04019 Latina, Włochy</p>
+                
+                <p><strong>Właściwe organy ochrony danych:</strong></p>
+                <ul>
+                    <li><strong>Włochy:</strong> Garante per la protezione dei dati personali, Piazza di Monte Citorio n. 121, 00186 ROMA (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">garanteprivacy.it</a>)</li>
+                    <li><strong>UE/EOG:</strong> Organ Twojego państwa członkowskiego (<a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener noreferrer">Lista organów EDPB</a>)</li>
+                    <li><strong>Wielka Brytania:</strong> Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF (<a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>)</li>
+                    <li><strong>Hiszpania:</strong> Agencia Española de Protección de Datos, C/ Jorge Juan, 6, 28001 Madrid (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">aepd.es</a>)</li>
+                    <li><strong>Brazylia:</strong> Autoridade Nacional de Proteção de Dados - ANPD, Setor de Autarquias Sul, Quadra 01, Bloco C, Edifício Darcy Ribeiro, Brasília/DF (<a href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener noreferrer">gov.br/anpd</a>)</li>
+                    <li><strong>Południowa Afryka:</strong> Information Regulator South Africa, JD House, 27 Stiemens Street, Braamfontein, Johannesburg (<a href="https://www.justice.gov.za/inforeg/" target="_blank" rel="noopener noreferrer">justice.gov.za/inforeg</a>)</li>
+                    <li><strong>Argentyna:</strong> Dirección Nacional de Protección de Datos Personales, Sarmiento 1118 5º piso, C1041AAX, Ciudad Autónoma de Buenos Aires (<a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank" rel="noopener noreferrer">argentina.gob.ar/aaip/datospersonales</a>)</li>
+                    <li><strong>Chile:</strong> Agencia de Protección de Datos Personales (w fazie wdrażania)</li>
+                    <li><strong>Kolumbia:</strong> Superintendencia de Industria y Comercio - SIC, Carrera 13 No. 27 - 00, Bogotá (<a href="https://www.sic.gov.co" target="_blank" rel="noopener noreferrer">sic.gov.co</a>)</li>
+                    <li><strong>Peru:</strong> Dirección General de Transparencia, Acceso a la Información Pública y Protección de Datos Personales, Jirón Carabaya Cdra. 1 S/N, Lima (<a href="https://www.minjus.gob.pe/proteccion-de-datos-personales/" target="_blank" rel="noopener noreferrer">minjus.gob.pe</a>)</li>
+                    <li><strong>Meksyk:</strong> Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI), Av. Insurgentes Sur 3211, Ciudad de México (<a href="https://home.inai.org.mx" target="_blank" rel="noopener noreferrer">home.inai.org.mx</a>)</li>
+                    <li><strong>Szwajcaria:</strong> Preposito federale alla protezione dei dati, Feldeggweg 1, CH-3003 Berno (<a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer">edoeb.admin.ch</a>)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p><strong>How Much - Oferty</strong> - Aplikacja do Ofert dla Profesjonalistów</p>
+            <div class="contact-info">
+                <p>Administrator: Alessio Di Pede</p>
+                <p>Email: <a href="mailto:howmuch.preventivi@gmail.com" style="color:#93c5fd;">howmuch.preventivi@gmail.com</a></p>
+                <p>Adres: Via Flacca 1195, Terracina, 04019 Latina, Włochy</p>
+            </div>
+            <div class="copyright">
+                <p>© 2024-2026 Alessio Di Pede. Wszelkie prawa zastrzeżone.</p>
+                <p>Niniejsza Polityka jest zgodna z: <strong>RODO</strong> (Rozporządzenie UE 2016/679), <strong>LGPD</strong> (Ustawa nr 13.709/2018 Brazylia), <strong>POPIA</strong> (Act 4 of 2013 Południowa Afryka), <strong>LOPDGDD 3/2018</strong> (Hiszpania), <strong>Ustawą 25.326</strong> (Argentyna), <strong>Ustawą 19.628</strong> (Chile), <strong>Ustawą 1581 z 2012</strong> (Kolumbia), <strong>Ustawą 29733</strong> (Peru), <strong>CCPA/CPRA</strong> (Kalifornia), <strong>PIPEDA</strong> (Kanada), <strong>PDPA</strong> (Tajlandia) i innymi obowiązującymi przepisami dotyczącymi prywatności.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Dropdown Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const langBtn = document.getElementById('langBtn');
+            const langDropdown = document.getElementById('langDropdown');
+            
+            // Toggle dropdown
+            langBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const isExpanded = langBtn.getAttribute('aria-expanded') === 'true';
+                langBtn.setAttribute('aria-expanded', !isExpanded);
+                langDropdown.classList.toggle('show');
+                
+                // Update chevron icon
+                const chevron = langBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = !isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!langDropdown.contains(e.target) && !langBtn.contains(e.target)) {
+                    langDropdown.classList.remove('show');
+                    langBtn.setAttribute('aria-expanded', 'false');
+                    
+                    // Reset chevron icon
+                    const chevron = langBtn.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Close dropdown on ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    langDropdown.classList.remove('show');
+                    langBtn.setAttribute('aria-expanded', 'false');
+                    
+                    // Reset chevron icon
+                    const chevron = langBtn.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+            
+            // Highlight current page in dropdown
+            const currentPath = window.location.pathname;
+            const langOptions = document.querySelectorAll('.lang-option');
+            
+            langOptions.forEach(option => {
+                const optionPath = option.getAttribute('href');
+                if (currentPath.includes(optionPath) || 
+                    (currentPath.includes('privacy-policy-pl.html') && optionPath === 'privacy-policy-pl.html')) {
+                    option.classList.add('active');
+                    option.setAttribute('aria-current', 'page');
+                }
+            });
+            
+            // Add smooth scroll for anchor links within the page
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            e.preventDefault();
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            
+            // Add print button functionality
+            const printBtn = document.createElement('button');
+            printBtn.innerHTML = '<i class="fas fa-print"></i> Drukuj';
+            printBtn.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 8px;
+                cursor: pointer;
+                box-shadow: var(--shadow);
+                z-index: 100;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-weight: 500;
+            `;
+            printBtn.addEventListener('click', () => window.print());
+            document.body.appendChild(printBtn);
+            
+            // Add responsive behavior for print button
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 768) {
+                    printBtn.style.bottom = '10px';
+                    printBtn.style.right = '10px';
+                    printBtn.style.padding = '8px 12px';
+                    printBtn.style.fontSize = '14px';
+                } else {
+                    printBtn.style.bottom = '20px';
+                    printBtn.style.right = '20px';
+                    printBtn.style.padding = '10px 15px';
+                    printBtn.style.fontSize = '16px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
