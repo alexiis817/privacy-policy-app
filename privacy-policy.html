@@ -439,8 +439,8 @@
         <div class="policy-container">
             <div class="policy-section">
                 <h1 class="section-title">INFORMATIVA SULLA PRIVACY</h1>
-                <p><strong>Ultimo aggiornamento:</strong> 1 Febbraio 2026</p>
-                <p><strong>Versione:</strong> 2.0</p>
+                <p><strong>Ultimo aggiornamento:</strong> 16 Aprile 2026</p>
+                <p><strong>Versione:</strong> 2.1</p>
                 
                 <div class="in-short">
                     <strong>In sintesi:</strong> Questa Informativa spiega come l'app <strong>"How Much - Preventivi"</strong> (da ora "App"), sviluppata individualmente da <strong>Alessio Di Pede</strong>, raccoglie, utilizza e protegge i tuoi dati personali. Rispettiamo il <strong>GDPR (UE/SEE/UK)</strong>, <strong>LGPD (Brasile)</strong>, <strong>POPIA (Sudafrica)</strong>, <strong>Ley 25.326 (Argentina)</strong>, <strong>Ley 19.628 (Cile)</strong>, <strong>LOPDGDD (Spagna)</strong> e tutte le leggi sulla privacy applicabili.
@@ -550,8 +550,65 @@
                 <p>Con tutti questi fornitori abbiamo accordi contrattuali che li obbligano a proteggere i tuoi dati e a usarli solo come da nostra istruzione.</p>
             </div>
 
+            <!-- ✅ NUOVA SEZIONE: INTELLIGENZA ARTIFICIALE (AI) - GOOGLE GEMINI -->
             <div class="policy-section">
-                <h2 class="section-subtitle">5. TRASFERIMENTI INTERNAZIONALI</h2>
+                <h2 class="section-subtitle">5. INTELLIGENZA ARTIFICIALE (AI) - GOOGLE GEMINI</h2>
+                <p>L'App offre una funzionalità opzionale di <strong>analisi AI</strong> dei preventivi e listini prezzi tramite <strong>Google Gemini API</strong> (servizio di intelligenza artificiale di Google).</p>
+                
+                <h3>Cosa viene inviato all'AI:</h3>
+                <ul>
+                    <li><strong>Prezzi e descrizioni</strong> dei lavori inseriti nel preventivo/listino</li>
+                    <li><strong>Settore merceologico</strong> rilevato (es. edilizia, idraulica, elettricista)</li>
+                    <li><strong>Paese e valuta</strong> selezionati dall'utente</li>
+                    <li><strong>Numeri e quantità</strong> dei lavori (solo a scopo analisi)</li>
+                </ul>
+                
+                <h3>Cosa NON viene mai inviato all'AI:</h3>
+                <ul>
+                    <li><strong>Dati personali</strong> (nome, cognome, email, telefono, Partita IVA, indirizzo)</li>
+                    <li><strong>Dati del cliente</strong> (nome, telefono, indirizzo)</li>
+                    <li><strong>Coordinate geografiche</strong> o posizione precisa</li>
+                    <li><strong>Dati di pagamento</strong> o informazioni finanziarie sensibili</li>
+                    <li><strong>ID dispositivo</strong> o identificatori univoci</li>
+                </ul>
+                
+                <h3>Come funziona:</h3>
+                <ul>
+                    <li>L'analisi AI è <strong>solo per utenti Premium</strong> (dopo acquisto abbonamento)</li>
+                    <li>L'utente deve <strong>cliccare attivamente</strong> sul pulsante "Analizza con AI"</li>
+                    <li><strong>Nessuna analisi automatica</strong> viene eseguita senza il tuo consenso esplicito</li>
+                    <li>Le analisi vengono elaborate in tempo reale e <strong>non vengono memorizzate</strong> da Google Gemini dopo l'elaborazione</li>
+                    <li>Solo i log anonimi (data, numero di richieste, successo/errore) vengono salvati per il miglioramento del servizio</li>
+                </ul>
+                
+                <h3>Dove vengono elaborati i dati:</h3>
+                <p>Le richieste all'AI sono gestite tramite <strong>Google Cloud Functions</strong> e <strong>Google Gemini API</strong>, che possono elaborare i dati su server situati in:</p>
+                <ul>
+                    <li><strong>Stati Uniti</strong> (regione us-central1, Iowa)</li>
+                    <li><strong>Europa</strong> (regione europe-west3, Francoforte) - <strong>preferita per utenti UE/SEE/UK/Svizzera</strong></li>
+                </ul>
+                <p>I trasferimenti di dati verso gli USA avvengono in conformità con le <strong>Clausole Contrattuali Standard (SCC)</strong> della Commissione Europea e il <strong>Data Privacy Framework UE-USA</strong>.</p>
+                
+                <h3>Limitazioni:</h3>
+                <ul>
+                    <li>Le analisi AI sono limitate a <strong>5 nei primi 7 giorni</strong> di Premium, poi <strong>50 al mese</strong></li>
+                    <li>Il limite si resetta automaticamente ogni mese</li>
+                    <li>Puoi vedere quante analisi ti rimangono direttamente nell'App</li>
+                </ul>
+                
+                <h3>Disattivazione:</h3>
+                <p>La funzionalità AI è <strong>completamente opzionale</strong>. Se non vuoi utilizzarla, <strong>basta non cliccare sul pulsante</strong>. L'App funziona regolarmente senza l'analisi AI.</p>
+                
+                <h3>Maggiori informazioni:</h3>
+                <p>Per dettagli su come Google gestisce i dati quando usi Gemini, consulta:</p>
+                <ul>
+                    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+                    <li><a href="https://cloud.google.com/terms/data-processing-terms" target="_blank" rel="noopener noreferrer">Google Cloud Data Processing Terms</a></li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-subtitle">6. TRASFERIMENTI INTERNAZIONALI</h2>
                 <p>I nostri fornitori possono trattare dati in paesi al di fuori della tua regione:</p>
                 <ul>
                     <li><strong>Google (USA):</strong> I trasferimenti si basano sulle <strong>Clausole Contrattuali Standard (SCC)</strong> della Commissione Europea (Decisione 2021/914) e sul <strong>Data Privacy Framework UE-USA</strong> (adeguatezza 10.07.2023, Commissione Europea).</li>
@@ -564,7 +621,7 @@
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">6. CONSERVAZIONE DEI DATI (QUANTO LI TENIAMO)</h2>
+                <h2 class="section-subtitle">7. CONSERVAZIONE DEI DATI (QUANTO LI TENIAMO)</h2>
                 <ul>
                     <li><strong>Utenti gratuiti:</strong> I dati salvati localmente rimangono sul tuo dispositivo finché non cancelli l'App o i dati. Noi non li conserviamo.</li>
                     <li><strong>Utenti Premium:</strong> I tuoi dati (email e preventivi) vengono conservati <strong>fino a quando mantieni l'account attivo</strong>. Alla cancellazione dell'account, i dati vengono eliminati dai nostri server entro:
@@ -580,7 +637,7 @@
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">7. I TUOI DIRITTI (GDPR, LGPD, POPIA, LEGGI SUDAMERICANE)</h2>
+                <h2 class="section-subtitle">8. I TUOI DIRITTI (GDPR, LGPD, POPIA, LEGGI SUDAMERICANE)</h2>
                 <p>A seconda della tua residenza, hai diritti specifici:</p>
                 <table class="data-table">
                     <thead>
@@ -648,7 +705,7 @@
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">8. SICUREZZA DEI DATI</h2>
+                <h2 class="section-subtitle">9. SICUREZZA DEI DATI</h2>
                 <p>Implementiamo misure tecniche e organizzative per proteggere i tuoi dati:</p>
                 <ul>
                     <li><strong>Firebase Security Rules:</strong> Accesso ai dati solo per utenti autorizzati</li>
@@ -667,7 +724,7 @@
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">9. COOKIE E TECNOLOGIE SIMILI</h2>
+                <h2 class="section-subtitle">10. COOKIE E TECNOLOGIE SIMILI</h2>
                 <p>L'App <strong>non utilizza cookie tradizionali</strong>. Utilizziamo:</p>
                 <ul>
                     <li><strong>Local Storage:</strong> Per salvare preferenze e preventivi localmente (sul tuo dispositivo)</li>
@@ -683,7 +740,7 @@
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">10. MINORI</h2>
+                <h2 class="section-subtitle">11. MINORI</h2>
                 <p>L'App <strong>non è rivolta a minori</strong> secondo le seguenti età minime:</p>
                 <ul>
                     <li><strong>UE/SEE/UK:</strong> 16 anni (GDPR) o età inferiore se prevista da Stato membro</li>
@@ -697,7 +754,7 @@
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">11. MODIFICHE A QUESTA INFORMATIVA</h2>
+                <h2 class="section-subtitle">12. MODIFICHE A QUESTA INFORMATIVA</h2>
                 <p>Aggiornerò questa Informativa quando necessario (cambiamenti normativi, nuove funzionalità). La versione aggiornata avrà una nuova data in alto. Cambiamenti significativi saranno comunicati:</p>
                 <ul>
                     <li><strong>Utenti Premium:</strong> Via email e notifica in App 30 giorni prima</li>
@@ -708,7 +765,7 @@
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">12. CONTATTI E AUTORITÀ DI CONTROLLO</h2>
+                <h2 class="section-subtitle">13. CONTATTI E AUTORITÀ DI CONTROLLO</h2>
                 <p>Per esercitare i tuoi diritti o per domande:</p>
                 <p><strong>Alessio Di Pede</strong><br>
                 Email: <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a><br>
