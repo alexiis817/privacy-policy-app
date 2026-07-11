@@ -425,7 +425,7 @@
             <div class="policy-section">
                 <h1 class="section-title">PRIVACY POLICY</h1>
                 <p><strong>Last updated:</strong> July 11, 2026</p>
-                <p><strong>Version:</strong> 2.2</p>
+                <p><strong>Version:</strong> 2.3</p>
                 
                 <div class="in-short">
                     <strong>In short:</strong> This Policy explains how the <strong>"How Much - Estimates"</strong> app (hereinafter "App"), individually developed by <strong>Alessio Di Pede</strong>, collects, uses, and protects your personal data. We comply with <strong>GDPR (EU/EEA/UK)</strong>, <strong>LGPD (Brazil)</strong>, <strong>POPIA (South Africa)</strong>, <strong>Ley 25.326 (Argentina)</strong>, <strong>Ley 19.628 (Chile)</strong>, <strong>LOPDGDD (Spain)</strong>, and all applicable privacy laws.
@@ -471,11 +471,25 @@
                     <li><strong>Account:</strong> To save estimates in the cloud and sync across devices, you need to create an account with an <strong>email address</strong>. We only save the email for access.</li>
                     <li><strong>Estimate data (voluntarily provided by YOU):</strong> When you create an estimate and choose to save it in the cloud, the data you enter <strong>is stored on Google Firebase's secure servers (Firestore)</strong>. This may include:
                         <ul>
-                            <li>Your information: First name, last name, phone number, VAT number, business email, logo.</li>
-                            <li>Client information: First name, last name, phone, VAT number, address.</li>
+                            <li>Your information: First name, last name, phone number, VAT number, RUT (Chile), CUIT/CUIL (Argentina), business email, logo.</li>
+                            <li>Client information: First name, last name, phone, VAT/RUT/CUIT number, address.</li>
                             <li>Estimate details: Services, prices, VAT, notes.</li>
                         </ul>
                     </li>
+                </ul>
+
+                <!-- ✅ NEW SECTION: VOICE RECORDINGS AND MICROPHONE -->
+                <h3>C) PREMIUM USERS ONLY (AI and Voice Assistant Features):</h3>
+                <ul>
+                    <li><strong>Voice recordings (temporary):</strong> When you use the AI voice assistant feature, your voice is temporarily recorded and transcribed to process your request.
+                        <ul>
+                            <li><strong>Audio recordings are NOT saved</strong> and are deleted immediately after transcription</li>
+                            <li><strong>Only the transcribed text</strong> is sent to the AI for processing</li>
+                            <li>Voice recording is activated <strong>only when the user voluntarily clicks</strong> the voice assistant activation button</li>
+                            <li>Recording is automatically stopped after <strong>30 seconds</strong> of inactivity or when the user manually interrupts it</li>
+                        </ul>
+                    </li>
+                    <li><strong>Microphone (optional):</strong> Required exclusively for the AI voice assistant feature. The microphone is activated only when the user voluntarily starts voice recording. <strong>No recording</strong> is made without your explicit consent and voluntary action.</li>
                 </ul>
                 
                 <div class="in-short">
@@ -519,6 +533,11 @@
                             <td>Email, data you provide</td>
                             <td><strong>Legitimate interest</strong> / pre-contractual measures - Art. 6.1.f GDPR, Section 11 POPIA</td>
                         </tr>
+                        <tr>
+                            <td>AI Voice Assistant (Premium feature)</td>
+                            <td>Temporary voice recordings, transcribed text</td>
+                            <td><strong>Contract performance</strong> / your explicit consent at the time of use - Art. 6.1.b GDPR, Art. 7 LGPD</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -529,6 +548,7 @@
                 <ul>
                     <li><strong>Google Firebase (Google Cloud Platform):</strong> Hosts the database (Firestore) where Premium users save estimates. Servers are secure and located in the EU/US depending on the region. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
                     <li><strong>Google AdMob and Meta Audience Network:</strong> To manage advertisements. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta's Privacy Policy</a>.</li>
+                    <li><strong>Google Gemini API:</strong> For the AI voice assistant feature (Premium users only). Receives the transcribed text, <strong>DOES NOT</strong> receive audio recordings or personal data. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
                     <li><strong>Payment stores:</strong> If you purchase Premium through the <strong>Apple App Store or Google Play Store</strong>, they handle payment data. I never receive your credit card.</li>
                     <li><strong>RevenueCat (optional):</strong> I may use this service to manage Premium subscriptions. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat's Privacy Policy</a>.</li>
                 </ul>
@@ -555,6 +575,7 @@
                     <li><strong>Geographic coordinates</strong> or precise location</li>
                     <li><strong>Payment data</strong> or sensitive financial information</li>
                     <li><strong>Device ID</strong> or unique identifiers</li>
+                    <li><strong>Audio recordings</strong> (only transcribed text is sent)</li>
                 </ul>
                 
                 <h3>How it works:</h3>
@@ -616,6 +637,7 @@
                             <li><strong>Reasonable timeframe</strong> for POPIA (South Africa) and South American laws</li>
                         </ul>
                     </li>
+                    <li><strong>Voice recordings:</strong> <strong>ARE NOT stored</strong>. They are deleted immediately after transcription.</li>
                     <li><strong>Anonymized technical data:</strong> Kept for a maximum of <strong>24 months</strong> for aggregate analysis.</li>
                     <li><strong>Data for legal obligations:</strong> Kept for the period required by the tax and commercial laws of each country (typically 5-10 years).</li>
                 </ul>

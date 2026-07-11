@@ -425,7 +425,7 @@
             <div class="policy-section">
                 <h1 class="section-title">POLITIQUE DE CONFIDENTIALITÉ</h1>
                 <p><strong>Dernière mise à jour:</strong> 11 Juillet 2026</p>
-                <p><strong>Version:</strong> 2.2</p>
+                <p><strong>Version:</strong> 2.3</p>
                 
                 <div class="in-short">
                     <strong>En résumé:</strong> Cette Politique explique comment l'application <strong>"How Much - Devis"</strong> (ci-après "App"), développée individuellement par <strong>Alessio Di Pede</strong>, collecte, utilise et protège vos données personnelles. Nous respectons le <strong>RGPD (UE/EEE/UK)</strong>, <strong>LGPD (Brésil)</strong>, <strong>POPIA (Afrique du Sud)</strong>, <strong>Ley 25.326 (Argentine)</strong>, <strong>Ley 19.628 (Chili)</strong>, <strong>LOPDGDD (Espagne)</strong> et toutes les lois applicables en matière de confidentialité.
@@ -471,11 +471,25 @@
                     <li><strong>Compte:</strong> Pour enregistrer les devis dans le cloud et les synchroniser entre appareils, vous devez créer un compte avec une <strong>adresse email</strong>. Nous enregistrons uniquement l'email pour l'accès.</li>
                     <li><strong>Données des devis (fournies volontairement par VOUS):</strong> Lorsque vous créez un devis et choisissez de l'enregistrer dans le cloud, les données que vous saisissez <strong>sont stockées sur les serveurs sécurisés de Google Firebase (Firestore)</strong>. Celles-ci peuvent inclure:
                         <ul>
-                            <li>Vos informations: Nom, prénom, numéro de téléphone, SIRET, TVA intracommunautaire, email professionnel, logo.</li>
-                            <li>Informations du client: Nom, prénom, téléphone, SIRET, adresse.</li>
+                            <li>Vos informations: Nom, prénom, numéro de téléphone, SIRET, TVA intracommunautaire, RUT (Chili), CUIT/CUIL (Argentine), email professionnel, logo.</li>
+                            <li>Informations du client: Nom, prénom, téléphone, SIRET/RUT/CUIT, adresse.</li>
                             <li>Détails du devis: Services, prix, TVA, notes.</li>
                         </ul>
                     </li>
+                </ul>
+
+                <!-- ✅ NOUVELLE SECTION: ENREGISTREMENTS VOCAUX ET MICROPHONE -->
+                <h3>C) UNIQUEMENT LES UTILISATEURS PREMIUM (Fonctionnalité IA et Assistant Vocal):</h3>
+                <ul>
+                    <li><strong>Enregistrements vocaux (temporaires):</strong> Lorsque vous utilisez la fonctionnalité d'assistant vocal IA, votre voix est temporairement enregistrée et transcrite pour traiter votre demande.
+                        <ul>
+                            <li><strong>Les enregistrements audio NE sont PAS sauvegardés</strong> et sont supprimés immédiatement après la transcription</li>
+                            <li><strong>Seul le texte transcrit</strong> est envoyé à l'IA pour traitement</li>
+                            <li>L'enregistrement vocal est activé <strong>uniquement lorsque l'utilisateur clique volontairement</strong> sur le bouton d'activation de l'assistant vocal</li>
+                            <li>L'enregistrement est automatiquement arrêté après <strong>30 secondes</strong> d'inactivité ou lorsque l'utilisateur l'interrompt manuellement</li>
+                        </ul>
+                    </li>
+                    <li><strong>Microphone (optionnel):</strong> Nécessaire exclusivement pour la fonctionnalité d'assistant vocal IA. Le microphone est activé uniquement lorsque l'utilisateur lance volontairement l'enregistrement vocal. <strong>Aucun enregistrement</strong> n'est effectué sans votre consentement explicite et action volontaire.</li>
                 </ul>
                 
                 <div class="in-short">
@@ -519,6 +533,11 @@
                             <td>Email, données que vous nous fournissez</td>
                             <td><strong>Intérêt légitime</strong> / mesures précontractuelles - Art. 6.1.f RGPD, Section 11 POPIA</td>
                         </tr>
+                        <tr>
+                            <td>Assistant vocal IA (fonctionnalité Premium)</td>
+                            <td>Enregistrements vocaux temporaires, texte transcrit</td>
+                            <td><strong>Exécution du contrat</strong> / votre consentement explicite au moment de l'utilisation - Art. 6.1.b RGPD, Art. 7 LGPD</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -529,6 +548,7 @@
                 <ul>
                     <li><strong>Google Firebase (Google Cloud Platform):</strong> Héberge la base de données (Firestore) où les utilisateurs Premium enregistrent les devis. Les serveurs sont sécurisés et situés dans l'UE/aux États-Unis selon la région. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Google</a>.</li>
                     <li><strong>Google AdMob et Meta Audience Network:</strong> Pour gérer les publicités. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Meta</a>.</li>
+                    <li><strong>Google Gemini API:</strong> Pour la fonctionnalité d'assistant vocal IA (uniquement utilisateurs Premium). Reçoit le texte transcrit, <strong>NE</strong> reçoit pas d'enregistrements audio ni de données personnelles. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Google</a>.</li>
                     <li><strong>Stores de paiement:</strong> Si vous achetez Premium via l'<strong>Apple App Store ou Google Play Store</strong>, ils gèrent les données de paiement. Je ne reçois jamais votre carte de crédit.</li>
                     <li><strong>RevenueCat (optionnel):</strong> Je peux utiliser ce service pour gérer les abonnements Premium. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité de RevenueCat</a>.</li>
                 </ul>
@@ -555,6 +575,7 @@
                     <li><strong>Coordonnées géographiques</strong> ou localisation précise</li>
                     <li><strong>Données de paiement</strong> ou informations financières sensibles</li>
                     <li><strong>ID de l'appareil</strong> ou identifiants uniques</li>
+                    <li><strong>Enregistrements audio</strong> (seul le texte transcrit est envoyé)</li>
                 </ul>
                 
                 <h3>Comment ça fonctionne:</h3>
@@ -616,6 +637,7 @@
                             <li><strong>Délai raisonnable</strong> pour la POPIA (Afrique du Sud) et les lois sud-américaines</li>
                         </ul>
                     </li>
+                    <li><strong>Enregistrements vocaux:</strong> <strong>NE sont PAS conservés</strong>. Ils sont supprimés immédiatement après la transcription.</li>
                     <li><strong>Données techniques anonymes:</strong> Conservées pour un maximum de <strong>24 mois</strong> pour des analyses agrégées.</li>
                     <li><strong>Données pour obligations légales:</strong> Conservées pour la période exigée par les lois fiscales et commerciales de chaque pays (généralement 5-10 ans).</li>
                 </ul>

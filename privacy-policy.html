@@ -440,7 +440,7 @@
             <div class="policy-section">
                 <h1 class="section-title">INFORMATIVA SULLA PRIVACY</h1>
                 <p><strong>Ultimo aggiornamento:</strong> 11 Luglio 2026</p>
-                <p><strong>Versione:</strong> 2.2</p>
+                <p><strong>Versione:</strong> 2.3</p>
                 
                 <div class="in-short">
                     <strong>In sintesi:</strong> Questa Informativa spiega come l'app <strong>"How Much - Preventivi"</strong> (da ora "App"), sviluppata individualmente da <strong>Alessio Di Pede</strong>, raccoglie, utilizza e protegge i tuoi dati personali. Rispettiamo il <strong>GDPR (UE/SEE/UK)</strong>, <strong>LGPD (Brasile)</strong>, <strong>POPIA (Sudafrica)</strong>, <strong>Ley 25.326 (Argentina)</strong>, <strong>Ley 19.628 (Cile)</strong>, <strong>LOPDGDD (Spagna)</strong> e tutte le leggi sulla privacy applicabili.
@@ -492,6 +492,20 @@
                         </ul>
                     </li>
                 </ul>
+
+                <!-- ✅ NUOVA SEZIONE: REGISTRAZIONE VOCALE E MICROFONO -->
+                <h3>C) PER GLI UTENTI PREMIUM (Funzionalità AI e Assistente Vocale):</h3>
+                <ul>
+                    <li><strong>Registrazioni vocali (temporanee):</strong> Quando utilizzi la funzionalità di assistente vocale AI, la tua voce viene registrata temporaneamente e trascritta per elaborare la tua richiesta.
+                        <ul>
+                            <li><strong>Le registrazioni audio NON vengono salvate</strong> e vengono eliminate immediatamente dopo la trascrizione</li>
+                            <li><strong>Solo il testo trascritto</strong> viene inviato all'AI per l'elaborazione</li>
+                            <li>La registrazione vocale si attiva <strong>solo quando l'utente clicca volontariamente</strong> sul pulsante di attivazione dell'assistente vocale</li>
+                            <li>La registrazione si ferma automaticamente dopo <strong>30 secondi</strong> di inattività o quando l'utente la interrompe manualmente</li>
+                        </ul>
+                    </li>
+                    <li><strong>Microfono (opzionale):</strong> Richiesto esclusivamente per la funzionalità di assistente vocale AI. Il microfono viene attivato solo quando l'utente avvia volontariamente la registrazione vocale. <strong>Nessuna registrazione</strong> viene effettuata senza il tuo esplicito consenso e azione volontaria.</li>
+                </ul>
                 
                 <div class="in-short">
                     <strong>Importante:</strong> Come utente <strong>GRATUITO</strong>, <strong>nessun dato personale</strong> lascia il tuo dispositivo. Tutto viene salvato localmente (local storage) e sei l'unico ad avervi accesso.
@@ -534,6 +548,11 @@
                             <td>Email, dati che ci fornisci</td>
                             <td><strong>Legittimo interesse</strong> / misure precontrattuali - Art. 6.1.f GDPR, Section 11 POPIA</td>
                         </tr>
+                        <tr>
+                            <td>Assistente vocale AI (funzionalità Premium)</td>
+                            <td>Registrazioni vocali temporanee, testo trascritto</td>
+                            <td><strong>Esecuzione del contratto</strong> / tuo consenso esplicito al momento dell'uso - Art. 6.1.b GDPR, Art. 7 LGPD</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -544,6 +563,7 @@
                 <ul>
                     <li><strong>Google Firebase (Google Cloud Platform):</strong> Ospita il database (Firestore) dove gli utenti Premium salvano i preventivi. I server sono sicuri e ubicati in UE/US a seconda della regione. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>.</li>
                     <li><strong>Google AdMob & Meta Audience Network:</strong> Per gestire gli annunci pubblicitari. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Privacy Policy di Meta</a>.</li>
+                    <li><strong>Google Gemini API:</strong> Per la funzionalità di assistente vocale AI (solo utenti Premium). Riceve il testo trascritto, <strong>NON</strong> riceve registrazioni audio né dati personali. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>.</li>
                     <li><strong>Store di pagamento:</strong> Se acquisti il Premium tramite <strong>Apple App Store o Google Play Store</strong>, loro gestiscono i dati di pagamento. Non ricevo mai la tua carta di credito.</li>
                     <li><strong>RevenueCat (opzionale):</strong> Potrei usare questo servizio per gestire gli abbonamenti Premium. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di RevenueCat</a>.</li>
                 </ul>
@@ -570,6 +590,7 @@
                     <li><strong>Coordinate geografiche</strong> o posizione precisa</li>
                     <li><strong>Dati di pagamento</strong> o informazioni finanziarie sensibili</li>
                     <li><strong>ID dispositivo</strong> o identificatori univoci</li>
+                    <li><strong>Registrazioni audio</strong> (viene inviato solo il testo trascritto)</li>
                 </ul>
                 
                 <h3>Come funziona:</h3>
@@ -631,6 +652,7 @@
                             <li><strong>Termine ragionevole</strong> per POPIA (Sudafrica) e leggi sudamericane</li>
                         </ul>
                     </li>
+                    <li><strong>Registrazioni vocali:</strong> <strong>NON vengono conservate</strong>. Vengono eliminate immediatamente dopo la trascrizione.</li>
                     <li><strong>Dati tecnici anonimi:</strong> Conservati per massimo <strong>24 mesi</strong> per analisi aggregate.</li>
                     <li><strong>Dati per obblighi legali:</strong> Conservati per il periodo richiesto dalle leggi fiscali e commerciali di ciascun paese (tipicamente 5-10 anni).</li>
                 </ul>

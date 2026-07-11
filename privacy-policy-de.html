@@ -425,7 +425,7 @@
             <div class="policy-section">
                 <h1 class="section-title">DATENSCHUTZERKLÄRUNG</h1>
                 <p><strong>Letzte Aktualisierung:</strong> 11. Juli 2026</p>
-                <p><strong>Version:</strong> 2.2</p>
+                <p><strong>Version:</strong> 2.3</p>
                 
                 <div class="in-short">
                     <strong>Kurz gefasst:</strong> Diese Erklärung erklärt, wie die App <strong>"How Much - Angebote"</strong> (nachfolgend "App"), die individuell von <strong>Alessio Di Pede</strong> entwickelt wurde, Ihre persönlichen Daten erhebt, verwendet und schützt. Wir halten uns an die <strong>DSGVO (EU/EWR/UK)</strong>, <strong>LGPD (Brasilien)</strong>, <strong>POPIA (Südafrika)</strong>, <strong>Ley 25.326 (Argentinien)</strong>, <strong>Ley 19.628 (Chile)</strong>, <strong>LOPDGDD (Spanien)</strong> und alle anwendbaren Datenschutzgesetze.
@@ -471,11 +471,25 @@
                     <li><strong>Konto:</strong> Um Angebote in der Cloud zu speichern und zwischen Geräten zu synchronisieren, müssen Sie ein Konto mit einer <strong>E-Mail-Adresse</strong> erstellen. Wir speichern nur die E-Mail für den Zugriff.</li>
                     <li><strong>Angebotsdaten (von IHNEN freiwillig bereitgestellt):</strong> Wenn Sie ein Angebot erstellen und es in der Cloud speichern möchten, werden die von Ihnen eingegebenen Daten <strong>auf den sicheren Servern von Google Firebase (Firestore) gespeichert</strong>. Diese können enthalten:
                         <ul>
-                            <li>Ihre Informationen: Name, Vorname, Telefonnummer, USt-IdNr., Firmen-E-Mail, Logo.</li>
-                            <li>Kundeninformationen: Name, Vorname, Telefon, USt-IdNr., Adresse.</li>
+                            <li>Ihre Informationen: Name, Vorname, Telefonnummer, USt-IdNr., RUT (Chile), CUIT/CUIL (Argentinien), Firmen-E-Mail, Logo.</li>
+                            <li>Kundeninformationen: Name, Vorname, Telefon, USt-IdNr./RUT/CUIT, Adresse.</li>
                             <li>Angebotsdetails: Dienstleistungen, Preise, Umsatzsteuer, Notizen.</li>
                         </ul>
                     </li>
+                </ul>
+
+                <!-- ✅ NEUE SEKTION: SPRACHAUFNAHMEN UND MIKROFON -->
+                <h3>C) NUR PREMIUM-NUTZER (KI- und Sprachassistent-Funktionen):</h3>
+                <ul>
+                    <li><strong>Sprachaufnahmen (temporär):</strong> Wenn Sie die KI-Sprachassistent-Funktion nutzen, wird Ihre Stimme vorübergehend aufgezeichnet und transkribiert, um Ihre Anfrage zu verarbeiten.
+                        <ul>
+                            <li><strong>Audioaufnahmen werden NICHT gespeichert</strong> und werden unmittelbar nach der Transkription gelöscht</li>
+                            <li><strong>Nur der transkribierte Text</strong> wird zur Verarbeitung an die KI gesendet</li>
+                            <li>Die Sprachaufnahme wird <strong>nur aktiviert, wenn der Benutzer freiwillig</strong> auf die Aktivierungstaste des Sprachassistenten klickt</li>
+                            <li>Die Aufnahme wird automatisch nach <strong>30 Sekunden</strong> Inaktivität beendet oder wenn der Benutzer sie manuell unterbricht</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mikrofon (optional):</strong> Ausschließlich für die KI-Sprachassistent-Funktion erforderlich. Das Mikrofon wird nur aktiviert, wenn der Benutzer die Sprachaufnahme freiwillig startet. <strong>Keine Aufnahme</strong> erfolgt ohne Ihre ausdrückliche Zustimmung und freiwillige Handlung.</li>
                 </ul>
                 
                 <div class="in-short">
@@ -519,6 +533,11 @@
                             <td>E-Mail, von Ihnen bereitgestellte Daten</td>
                             <td><strong>Berechtigtes Interesse</strong> / vorvertragliche Maßnahmen - Art. 6.1.f DSGVO, Abschnitt 11 POPIA</td>
                         </tr>
+                        <tr>
+                            <td>KI-Sprachassistent (Premium-Funktion)</td>
+                            <td>Temporäre Sprachaufnahmen, transkribierter Text</td>
+                            <td><strong>Vertragserfüllung</strong> / Ihre ausdrückliche Einwilligung zum Zeitpunkt der Nutzung - Art. 6.1.b DSGVO, Art. 7 LGPD</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -529,6 +548,7 @@
                 <ul>
                     <li><strong>Google Firebase (Google Cloud Platform):</strong> Hostet die Datenbank (Firestore), in der Premium-Nutzer ihre Angebote speichern. Die Server sind sicher und befinden sich je nach Region in der EU/USA. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</li>
                     <li><strong>Google AdMob und Meta Audience Network:</strong> Zur Verwaltung von Werbung. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Meta</a>.</li>
+                    <li><strong>Google Gemini API:</strong> Für die KI-Sprachassistent-Funktion (nur Premium-Nutzer). Empfängt den transkribierten Text, <strong>NICHT</strong> Audioaufnahmen oder personenbezogene Daten. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</li>
                     <li><strong>Zahlungsplattformen:</strong> Wenn Sie Premium über den <strong>Apple App Store oder Google Play Store</strong> kaufen, verwalten diese die Zahlungsdaten. Ich erhalte niemals Ihre Kreditkarte.</li>
                     <li><strong>RevenueCat (optional):</strong> Ich kann diesen Dienst zur Verwaltung von Premium-Abonnements nutzen. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von RevenueCat</a>.</li>
                 </ul>
@@ -555,6 +575,7 @@
                     <li><strong>Geografische Koordinaten</strong> oder genauer Standort</li>
                     <li><strong>Zahlungsdaten</strong> oder sensible Finanzinformationen</li>
                     <li><strong>Geräte-ID</strong> oder eindeutige Kennungen</li>
+                    <li><strong>Audioaufnahmen</strong> (nur der transkribierte Text wird gesendet)</li>
                 </ul>
                 
                 <h3>Wie es funktioniert:</h3>
@@ -616,6 +637,7 @@
                             <li><strong>Angemessener Frist</strong> für die POPIA (Südafrika) und südamerikanische Gesetze</li>
                         </ul>
                     </li>
+                    <li><strong>Sprachaufnahmen:</strong> <strong>WERDEN NICHT</strong> aufbewahrt. Sie werden unmittelbar nach der Transkription gelöscht.</li>
                     <li><strong>Anonyme technische Daten:</strong> Werden für maximal <strong>24 Monate</strong> für aggregierte Analysen aufbewahrt.</li>
                     <li><strong>Daten für gesetzliche Verpflichtungen:</strong> Werden für den von den Steuer- und Handelsgesetzen jedes Landes geforderten Zeitraum aufbewahrt (in der Regel 5-10 Jahre).</li>
                 </ul>

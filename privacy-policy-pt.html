@@ -440,10 +440,10 @@
             <div class="policy-section">
                 <h1 class="section-title">POLÍTICA DE PRIVACIDADE</h1>
                 <p><strong>Última atualização:</strong> 11 de Julho de 2026</p>
-                <p><strong>Versão:</strong> 2.2</p>
+                <p><strong>Versão:</strong> 2.3</p>
                 
                 <div class="in-short">
-                    <strong>Em resumo:</strong> Esta Política explica como o aplicativo <strong>"How Much - Orçamentos"</strong> (doravante "App"), desenvolvido individualmente por <strong>Alessio Di Pede</strong>, coleta, usa e protege seus dados pessoais. Respeitamos o <strong>GDPR (UE/EEE/UK)</strong>, <strong>LGPD (Brasil)</strong>, <strong>POPIA (África do Sul)</strong> e todas as leis de privacidade aplicáveis.
+                    <strong>Em resumo:</strong> Esta Política explica como o aplicativo <strong>"How Much - Orçamentos"</strong> (doravante "App"), desenvolvido individualmente por <strong>Alessio Di Pede</strong>, coleta, usa e protege seus dados pessoais. Respeitamos o <strong>GDPR (UE/EEE/UK)</strong>, <strong>LGPD (Brasil)</strong>, <strong>POPIA (África do Sul)</strong>, <strong>Ley 25.326 (Argentina)</strong>, <strong>Ley 19.628 (Chile)</strong>, <strong>LOPDGDD (Espanha)</strong> e todas as leis de privacidade aplicáveis.
                 </div>
                 
                 <p>Esta Política se aplica a todos os usuários do App, tanto na versão gratuita quanto Premium, em <strong>todos os países onde o App está disponível</strong> (Europa, América do Sul, América do Norte, África, Ásia).</p>
@@ -486,11 +486,25 @@
                     <li><strong>Conta:</strong> Para salvar orçamentos na nuvem e sincronizar entre dispositivos, é necessário criar uma conta com um <strong>endereço de email</strong>. Salvamos apenas o email para acesso.</li>
                     <li><strong>Dados dos orçamentos (fornecidos voluntariamente por VOCÊ):</strong> Quando você cria um orçamento e opta por salvá-lo na nuvem, os dados inseridos <strong>são armazenados nos servidores seguros do Google Firebase (Firestore)</strong>. Estes podem incluir:
                         <ul>
-                            <li>Suas informações: Nome, sobrenome, número de telefone, NIF/P.IVA, CPF/CNPJ (Brasil), email empresarial, logotipo.</li>
-                            <li>Informações do cliente: Nome, sobrenome, telefone, NIF/CPF/CNPJ, endereço.</li>
-                            <li>Detalhes do orçamento: Serviços, preços, IVA/VAT, notas.</li>
+                            <li>Suas informações: Nome, sobrenome, número de telefone, NIF/P.IVA, CPF/CNPJ (Brasil), RUT (Chile), CUIT/CUIL (Argentina), email empresarial, logotipo.</li>
+                            <li>Informações do cliente: Nome, sobrenome, telefone, NIF/CPF/CNPJ/RUT/CUIT, endereço.</li>
+                            <li>Detalhes do orçamento: Serviços, preços, IVA/VAT/IVA/IGV, notas.</li>
                         </ul>
                     </li>
+                </ul>
+
+                <!-- ✅ NOVA SEÇÃO: GRAVAÇÃO DE VOZ E MICROFONE -->
+                <h3>C) APENAS USUÁRIOS PREMIUM (Funcionalidade de IA e Assistente de Voz):</h3>
+                <ul>
+                    <li><strong>Gravações de voz (temporárias):</strong> Quando você utiliza a funcionalidade de assistente de voz por IA, sua voz é gravada temporariamente e transcrita para processar sua solicitação.
+                        <ul>
+                            <li><strong>As gravações de áudio NÃO são salvas</strong> e são eliminadas imediatamente após a transcrição</li>
+                            <li><strong>Apenas o texto transcrito</strong> é enviado para a IA para processamento</li>
+                            <li>A gravação de voz é ativada <strong>apenas quando o usuário clica voluntariamente</strong> no botão de ativação do assistente de voz</li>
+                            <li>A gravação é interrompida automaticamente após <strong>30 segundos</strong> de inatividade ou quando o usuário a interrompe manualmente</li>
+                        </ul>
+                    </li>
+                    <li><strong>Microfone (opcional):</strong> Necessário exclusivamente para a funcionalidade de assistente de voz por IA. O microfone é ativado apenas quando o usuário inicia voluntariamente a gravação de voz. <strong>Nenhuma gravação</strong> é feita sem seu consentimento explícito e ação voluntária.</li>
                 </ul>
                 
                 <div class="in-short">
@@ -505,7 +519,7 @@
                         <tr>
                             <th>Finalidade</th>
                             <th>Quais Dados</th>
-                            <th>Base Legal (GDPR/LGPD/POPIA)</th>
+                            <th>Base Legal (GDPR/LGPD/POPIA/Leis Sul-Americanas)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -534,6 +548,11 @@
                             <td>Email, dados que você nos fornece</td>
                             <td><strong>Interesse legítimo</strong> / medidas pré-contratuais - Art. 6.1.f GDPR, Section 11 POPIA</td>
                         </tr>
+                        <tr>
+                            <td>Assistente de voz por IA (funcionalidade Premium)</td>
+                            <td>Gravações de voz temporárias, texto transcrito</td>
+                            <td><strong>Execução do contrato</strong> / seu consentimento explícito no momento do uso - Art. 6.1.b GDPR, Art. 7 LGPD</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -544,6 +563,7 @@
                 <ul>
                     <li><strong>Google Firebase (Google Cloud Platform):</strong> Hospeda o banco de dados (Firestore) onde os usuários Premium salvam os orçamentos. Os servidores são seguros e localizados na UE/EUA dependendo da região. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a>.</li>
                     <li><strong>Google AdMob & Meta Audience Network:</strong> Para gerenciar anúncios publicitários. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Política de Privacidade da Meta</a>.</li>
+                    <li><strong>Google Gemini API:</strong> Para a funcionalidade de assistente de voz por IA (apenas usuários Premium). Recebe o texto transcrito, <strong>NÃO</strong> recebe gravações de áudio nem dados pessoais. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a>.</li>
                     <li><strong>Lojas de pagamento:</strong> Se você comprar o Premium através da <strong>Apple App Store ou Google Play Store</strong>, eles gerenciam os dados de pagamento. Nunca recebo seu cartão de crédito.</li>
                     <li><strong>RevenueCat (opcional):</strong> Posso usar este serviço para gerenciar assinaturas Premium. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade da RevenueCat</a>.</li>
                 </ul>
@@ -570,6 +590,7 @@
                     <li><strong>Coordenadas geográficas</strong> ou localização precisa</li>
                     <li><strong>Dados de pagamento</strong> ou informações financeiras sensíveis</li>
                     <li><strong>ID do dispositivo</strong> ou identificadores únicos</li>
+                    <li><strong>Gravações de áudio</strong> (apenas o texto transcrito é enviado)</li>
                 </ul>
                 
                 <h3>Como funciona:</h3>
@@ -615,6 +636,8 @@
                     <li><strong>Meta (EUA):</strong> Similarmente baseado em SCC e Data Privacy Framework.</li>
                     <li><strong>LGPD (Brasil):</strong> As transferências são feitas para países com nível de proteção adequado reconhecido pela ANPD ou com garantias contratuais específicas nos termos dos Arts. 33 e 34 da LGPD.</li>
                     <li><strong>POPIA (África do Sul):</strong> As transferências respeitam as condições da Seção 72 do POPIA Act e as autorizações do Information Regulator.</li>
+                    <li><strong>Argentina (Ley 25.326):</strong> As transferências respeitam o Decreto 1558/2001 e as autorizações da Dirección Nacional de Protección de Datos Personales.</li>
+                    <li><strong>Chile (Ley 19.628):</strong> As transferências respeitam os padrões adequados de proteção previstos pela legislação chilena.</li>
                 </ul>
             </div>
 
@@ -626,16 +649,17 @@
                         <ul>
                             <li><strong>30 dias</strong> para GDPR e normas europeias</li>
                             <li><strong>15 dias úteis</strong> para LGPD (Brasil) mediante solicitação</li>
-                            <li><strong>Prazo razoável</strong> para POPIA (África do Sul)</li>
+                            <li><strong>Prazo razoável</strong> para POPIA (África do Sul) e leis sul-americanas</li>
                         </ul>
                     </li>
+                    <li><strong>Gravações de voz:</strong> <strong>NÃO são armazenadas</strong>. São eliminadas imediatamente após a transcrição.</li>
                     <li><strong>Dados técnicos anônimos:</strong> Mantidos por no máximo <strong>24 meses</strong> para análises agregadas.</li>
                     <li><strong>Dados para obrigações legais:</strong> Mantidos pelo período exigido pelas leis fiscais e comerciais de cada país (tipicamente 5-10 anos).</li>
                 </ul>
             </div>
 
             <div class="policy-section">
-                <h2 class="section-subtitle">8. SEUS DIREITOS (GDPR, LGPD, POPIA)</h2>
+                <h2 class="section-subtitle">8. SEUS DIREITOS (GDPR, LGPD, POPIA, LEIS SUL-AMERICANAS)</h2>
                 <p>Dependendo da sua residência, você tem direitos específicos:</p>
                 <table class="data-table">
                     <thead>
@@ -681,6 +705,21 @@
                             <td>Revogar o consentimento a qualquer momento</td>
                             <td>Imediata</td>
                         </tr>
+                        <tr>
+                            <td><strong>Informação sobre dados</strong> (Art. 9 Ley 25.326 Argentina)</td>
+                            <td>Conhecer a existência de bancos de dados</td>
+                            <td>5 dias</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Habeas Data</strong> (Leis Colômbia, Peru, Equador)</td>
+                            <td>Direitos constitucionais sobre dados pessoais</td>
+                            <td>Prazos legais específicos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CCPA/CPRA (Califórnia): "Do Not Sell My Personal Information"</strong></td>
+                            <td>Direito de opt-out da venda de dados</td>
+                            <td><strong>Não vendemos dados</strong>. Para opt-out geral: 45 dias</td>
+                        </tr>
                     </tbody>
                 </table>
                 <p><strong>Para exercer esses direitos, entre em contato:</strong> <a href="mailto:howmuch.preventivi@gmail.com">howmuch.preventivi@gmail.com</a></p>
@@ -702,6 +741,7 @@
                     <li><strong>GDPR:</strong> Notificação à Autoridade em até 72 horas e a você sem demora injustificada</li>
                     <li><strong>LGPD:</strong> Comunicação à ANPD e aos interessados em "tempo razoável"</li>
                     <li><strong>POPIA:</strong> Notificação ao Information Regulator e aos interessados imediatamente</li>
+                    <li><strong>Argentina:</strong> Notificação à Dirección Nacional de Protección de Datos Personales</li>
                 </ul>
             </div>
 
@@ -728,6 +768,8 @@
                     <li><strong>UE/EEE/UK:</strong> 16 anos (GDPR) ou idade inferior se prevista pelo Estado membro</li>
                     <li><strong>Brasil:</strong> 18 anos (LGPD) ou 16-17 com consentimento dos pais</li>
                     <li><strong>África do Sul:</strong> 18 anos (POPIA)</li>
+                    <li><strong>Argentina:</strong> 18 anos (Ley 25.326)</li>
+                    <li><strong>Chile:</strong> 18 anos (Ley 19.628)</li>
                     <li><strong>EUA (COPPA):</strong> 13 anos</li>
                 </ul>
                 <p>Não coletamos conscientemente dados de menores. Se você é pai/mãe e descobre que seu filho nos forneceu dados, entre em contato para exclusão imediata.</p>
@@ -758,6 +800,10 @@
                     <li><strong>UK:</strong> Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF (<a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>)</li>
                     <li><strong>Brasil:</strong> Autoridade Nacional de Proteção de Dados - ANPD, Setor de Autarquias Sul, Quadra 01, Bloco C, Edifício Darcy Ribeiro, Brasília/DF (<a href="https://www.gov.br/anpd/pt-br" target="_blank" rel="noopener noreferrer">gov.br/anpd</a>)</li>
                     <li><strong>África do Sul:</strong> Information Regulator South Africa, JD House, 27 Stiemens Street, Braamfontein, Johannesburg (<a href="https://www.justice.gov.za/inforeg/" target="_blank" rel="noopener noreferrer">justice.gov.za/inforeg</a>)</li>
+                    <li><strong>Argentina:</strong> Dirección Nacional de Protección de Datos Personales, Sarmiento 1118 5º piso, C1041AAX, Ciudad Autónoma de Buenos Aires (<a href="https://www.argentina.gob.ar/aaip/datospersonales" target="_blank" rel="noopener noreferrer">argentina.gob.ar/aaip/datospersonales</a>)</li>
+                    <li><strong>Chile:</strong> Agencia de Protección de Datos Personales (em fase de implementação)</li>
+                    <li><strong>Colômbia:</strong> Superintendencia de Industria y Comercio - SIC (<a href="https://www.sic.gov.co" target="_blank" rel="noopener noreferrer">sic.gov.co</a>)</li>
+                    <li><strong>Peru:</strong> Dirección General de Transparencia, Acceso a la Información Pública y Protección de Datos Personales (<a href="https://www.minjus.gob.pe/proteccion-de-datos-personales/" target="_blank" rel="noopener noreferrer">minjus.gob.pe</a>)</li>
                     <li><strong>Suíça:</strong> Preposito federale alla protezione dei dati, Feldeggweg 1, CH-3003 Berna (<a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener noreferrer">edoeb.admin.ch</a>)</li>
                 </ul>
             </div>
@@ -826,7 +872,7 @@
             </div>
             <div class="copyright">
                 <p>© 2024-2026 Alessio Di Pede. Todos os direitos reservados.</p>
-                <p>Esta Política está em conformidade com: <strong>GDPR</strong> (Regulamento UE 2016/679), <strong>LGPD</strong> (Lei n. 13.709/2018 Brasil), <strong>POPIA</strong> (Act 4 of 2013 África do Sul), <strong>CCPA/CPRA</strong> (Califórnia), e outras leis de privacidade aplicáveis.</p>
+                <p>Esta Política está em conformidade com: <strong>GDPR</strong> (Regulamento UE 2016/679), <strong>LGPD</strong> (Lei n. 13.709/2018 Brasil), <strong>POPIA</strong> (Act 4 of 2013 África do Sul), <strong>Ley 25.326</strong> (Argentina), <strong>Ley 19.628</strong> (Chile), <strong>LOPDGDD 3/2018</strong> (Espanha), <strong>CCPA/CPRA</strong> (Califórnia), <strong>PIPEDA</strong> (Canadá), <strong>PDPA</strong> (Tailândia), e outras leis de privacidade aplicáveis.</p>
             </div>
         </div>
     </footer>

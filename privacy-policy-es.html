@@ -425,7 +425,7 @@
             <div class="policy-section">
                 <h1 class="section-title">POLÍTICA DE PRIVACIDAD</h1>
                 <p><strong>Última actualización:</strong> 11 de Julio de 2026</p>
-                <p><strong>Versión:</strong> 2.2</p>
+                <p><strong>Versión:</strong> 2.3</p>
                 
                 <div class="in-short">
                     <strong>En resumen:</strong> Esta Política explica cómo la aplicación <strong>"How Much - Presupuestos"</strong> (en adelante "App"), desarrollada individualmente por <strong>Alessio Di Pede</strong>, recopila, utiliza y protege tus datos personales. Respetamos el <strong>GDPR (UE/EEE/UK)</strong>, <strong>LGPD (Brasil)</strong>, <strong>POPIA (Sudáfrica)</strong>, <strong>Ley 25.326 (Argentina)</strong>, <strong>Ley 19.628 (Chile)</strong>, <strong>LOPDGDD (España)</strong> y todas las leyes de privacidad aplicables.
@@ -471,11 +471,25 @@
                     <li><strong>Cuenta:</strong> Para guardar presupuestos en la nube y sincronizarlos entre dispositivos, es necesario crear una cuenta con un <strong>correo electrónico</strong>. Guardamos solo el email para el acceso.</li>
                     <li><strong>Datos de los presupuestos (proporcionados voluntariamente por TI):</strong> Cuando creas un presupuesto y eliges guardarlo en la nube, los datos que ingresas <strong>se almacenan en los servidores seguros de Google Firebase (Firestore)</strong>. Estos pueden incluir:
                         <ul>
-                            <li>Tus datos: Nombre, apellido, número de teléfono, NIF/CIF, DNI/Pasaporte, email empresarial, logo.</li>
-                            <li>Datos del cliente: Nombre, apellido, teléfono, NIF/DNI, dirección.</li>
-                            <li>Detalles del presupuesto: Servicios, precios, IVA, notas.</li>
+                            <li>Tus datos: Nombre, apellido, número de teléfono, NIF/CIF, DNI/Pasaporte, RUT (Chile), CUIT/CUIL (Argentina), email empresarial, logo.</li>
+                            <li>Datos del cliente: Nombre, apellido, teléfono, NIF/DNI/RUT/CUIT, dirección.</li>
+                            <li>Detalles del presupuesto: Servicios, precios, IVA/VAT/IVA/IGV, notas.</li>
                         </ul>
                     </li>
+                </ul>
+
+                <!-- ✅ NUEVA SECCIÓN: GRABACIONES DE VOZ Y MICRÓFONO -->
+                <h3>C) SOLO USUARIOS PREMIUM (Funcionalidad de IA y Asistente de Voz):</h3>
+                <ul>
+                    <li><strong>Grabaciones de voz (temporales):</strong> Cuando utilizas la funcionalidad de asistente de voz por IA, tu voz se graba temporalmente y se transcribe para procesar tu solicitud.
+                        <ul>
+                            <li><strong>Las grabaciones de audio NO se guardan</strong> y se eliminan inmediatamente después de la transcripción</li>
+                            <li><strong>Solo el texto transcrito</strong> se envía a la IA para su procesamiento</li>
+                            <li>La grabación de voz se activa <strong>solo cuando el usuario hace clic voluntariamente</strong> en el botón de activación del asistente de voz</li>
+                            <li>La grabación se detiene automáticamente después de <strong>30 segundos</strong> de inactividad o cuando el usuario la interrumpe manualmente</li>
+                        </ul>
+                    </li>
+                    <li><strong>Micrófono (opcional):</strong> Necesario exclusivamente para la funcionalidad de asistente de voz por IA. El micrófono se activa solo cuando el usuario inicia voluntariamente la grabación de voz. <strong>Ninguna grabación</strong> se realiza sin tu consentimiento explícito y acción voluntaria.</li>
                 </ul>
                 
                 <div class="in-short">
@@ -519,6 +533,11 @@
                             <td>Email, datos que nos proporciones</td>
                             <td><strong>Interés legítimo</strong> / medidas precontractuales - Art. 6.1.f GDPR, Sección 11 POPIA</td>
                         </tr>
+                        <tr>
+                            <td>Asistente de voz por IA (funcionalidad Premium)</td>
+                            <td>Grabaciones de voz temporales, texto transcrito</td>
+                            <td><strong>Ejecución del contrato</strong> / tu consentimiento explícito en el momento del uso - Art. 6.1.b GDPR, Art. 7 LGPD</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -529,6 +548,7 @@
                 <ul>
                     <li><strong>Google Firebase (Google Cloud Platform):</strong> Aloja la base de datos (Firestore) donde los usuarios Premium guardan los presupuestos. Los servidores son seguros y están ubicados en UE/EE.UU. según la región. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a>.</li>
                     <li><strong>Google AdMob y Meta Audience Network:</strong> Para gestionar la publicidad. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Política de Privacidad de Meta</a>.</li>
+                    <li><strong>Google Gemini API:</strong> Para la funcionalidad de asistente de voz por IA (solo usuarios Premium). Recibe el texto transcrito, <strong>NO</strong> recibe grabaciones de audio ni datos personales. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a>.</li>
                     <li><strong>Tiendas de pago:</strong> Si compras Premium a través de la <strong>Apple App Store o Google Play Store</strong>, ellos gestionan los datos de pago. Nunca recibo tu tarjeta de crédito.</li>
                     <li><strong>RevenueCat (opcional):</strong> Puedo usar este servicio para gestionar suscripciones Premium. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de RevenueCat</a>.</li>
                 </ul>
@@ -555,6 +575,7 @@
                     <li><strong>Coordenadas geográficas</strong> o ubicación precisa</li>
                     <li><strong>Datos de pago</strong> o información financiera sensible</li>
                     <li><strong>ID del dispositivo</strong> o identificadores únicos</li>
+                    <li><strong>Grabaciones de audio</strong> (solo el texto transcrito se envía)</li>
                 </ul>
                 
                 <h3>Cómo funciona:</h3>
@@ -616,6 +637,7 @@
                             <li><strong>Plazo razonable</strong> para POPIA (Sudáfrica) y leyes sudamericanas</li>
                         </ul>
                     </li>
+                    <li><strong>Grabaciones de voz:</strong> <strong>NO se conservan</strong>. Se eliminan inmediatamente después de la transcripción.</li>
                     <li><strong>Datos técnicos anónimos:</strong> Se conservan por un máximo de <strong>24 meses</strong> para análisis agregados.</li>
                     <li><strong>Datos por obligaciones legales:</strong> Se conservan por el período exigido por las leyes fiscales y comerciales de cada país (típicamente 5-10 años).</li>
                 </ul>
